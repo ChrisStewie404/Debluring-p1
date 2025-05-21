@@ -44,20 +44,7 @@ def _preprocess(self, x: np.ndarray, mask: Optional[np.ndarray]):
     return map(self._array_to_batch, (x, mask)), h, w
 
 
-if __name__ == "__main__":
-    # weights_path = 'fpn_inception.h5'
-    
-    # model_config = config['model']
-    # model = FPNInception(norm_layer=MN.get_norm_layer(norm_type=model_config['norm_layer']))
-    # skeleton = get_generator(config['model'])
-    # if(torch.cuda.is_available()):
-    #     skeleton.load_state_dict(torch.load(weights_path)['model'])
-    #     model = skeleton.cuda()
-    # else:
-    #     skeleton.load_state_dict(torch.load(weights_path,map_location=torch.device('cpu'))['model'])
-    #     model = skeleton.cpu()
-    
-
+if __name__ == "__main__": 
     img_dir = r'./test_img/*.png'
     weights_path = 'fpn_inception.h5'
 
