@@ -11,7 +11,16 @@ import cv2
 from glob import glob
 import yaml
 
+class InstanceNormAlternative(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.eps=1e-6
 
+    def forward(self, inp: torch.Tensor) -> torch.Tensor:
+        assert (len(inp.shape)==4), "InstanceNorm Shape Error!"
+        desc = 1 / (inp.var(axis=[2, 3], keepdim=True, unbiased=False) + self.eps) ** 0.5
+        retval = (inp - inp.mean(axis=[2, 3], keepdim=True)) * desc
+        return retval
 
 def _preprocess(self, x: np.ndarray, mask: Optional[np.ndarray]):
     x, _ = self.normalize_fn(x, x)
@@ -52,8 +61,6 @@ if __name__ == "__main__":
     img_dir = r'./test_img/*.png'
     weights_path = 'fpn_inception.h5'
 
-
-
     predictor = Predictor(weights_path=weights_path)
 
     # Generate model
@@ -78,10 +85,25 @@ if __name__ == "__main__":
             new_state_dict[k] = v
         model_g.load_state_dict(new_state_dict)
     # model_g.train(True)
-    for module in model_g.modules():
-        if isinstance(module, torch.nn.InstanceNorm2d):
-            module.track_running_stats = False
     model_g.eval()
+    replace_list =[k.split('.') 
+                    for k, m in model_g.named_modules(remove_duplicate=False) 
+                    if isinstance(m, torch.nn.InstanceNorm2d)]
+    # for name, module in model_g.named_modules():
+    #     if isinstance(module, torch.nn.InstanceNorm2d):
+    #         # module.track_running_stats = False
+    #         # module.use_input_stats = False
+    #         # module.eval()
+    #         # print(module)
+    #         print(name)
+    #         replace_dict[name] = InstanceNormAlternative()
+    for *parent, id in replace_list:
+        model_g.get_submodule('.'.join(parent))[int(id)] = InstanceNormAlternative()
+    model_g.eval()
+    print("wait")
+    for name, module in model_g.named_modules():
+        if isinstance(module, InstanceNormAlternative):
+            print(name, module)
     # model_g = get_generator(config['model'])
 
     # # Generate example input
@@ -96,50 +118,52 @@ if __name__ == "__main__":
     #         inputs = [img.cuda()]
     #     else:
     #         inputs = [img.cpu()]
-        
-    example_input = (torch.randn((1,3,736,1312)),)   
-    model_onnx = torch.onnx.export(
-        model_g,
-        example_input,
-        "FPNInception.onnx",
-        # dynamo=True,
-        opset_version=14,
-        autograd_inlining=False
-    )
-    model_onnx.save("FPNInception14.onnx")
-    # # Load weight
-    # if torch.cuda.is_available():
-    #     model_g.load_state_dict(torch.load(weights_path)['model'])
-    #     model = model_g.cuda()
-    #     model.train(True)
+    with torch.no_grad():
+        example_input = (torch.randn((1,3,736,1312)),)   
+        model_onnx = torch.onnx.export(
+            model_g,
+            example_input,
+            "FPNInception.onnx",
+            # dynamo=True,
+            opset_version=15,
+            autograd_inlining=False,
+            dynamic_axes=None,
+            do_constant_folding=False
+        )
+        # model_onnx.save("FPNInception14.onnx")
+        # # Load weight
+        # if torch.cuda.is_available():
+        #     model_g.load_state_dict(torch.load(weights_path)['model'])
+        #     model = model_g.cuda()
+        #     model.train(True)
 
+            
+        #     torch.onnx.export(
+        #         model,
+        #         example_input,
+        #         "FPNInception.onnx",
+        #         dynamo=True
+        #     )
+        # else:
+        #     model_g.load_state_dict(torch.load(weights_path,map_location=torch.device('cpu'))['model'])
+        #     model = model_g.cpu()
+        #     model.train(True)
         
-    #     torch.onnx.export(
-    #         model,
-    #         example_input,
-    #         "FPNInception.onnx",
-    #         dynamo=True
-    #     )
-    # else:
-    #     model_g.load_state_dict(torch.load(weights_path,map_location=torch.device('cpu'))['model'])
-    #     model = model_g.cpu()
-    #     model.train(True)
-    
-    
+        
+            # torch.onnx.export(
+            #     model,
+            #     example_input,
+            #     "FPNInception.onnx",
+            #     dynamo=True
+            # )
+
+        # Set to evaluation mode
+        
         # torch.onnx.export(
         #     model,
-        #     example_input,
+        #     (input_tensors[0],),
         #     "FPNInception.onnx",
+        #     input_names=["blurred1"],
         #     dynamo=True
         # )
-
-    # Set to evaluation mode
-    
-    # torch.onnx.export(
-    #     model,
-    #     (input_tensors[0],),
-    #     "FPNInception.onnx",
-    #     input_names=["blurred1"],
-    #     dynamo=True
-    # )
 
