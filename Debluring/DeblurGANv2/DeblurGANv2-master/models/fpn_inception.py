@@ -65,15 +65,21 @@ class FPNInception(nn.Module):
     def forward(self, x):
         map0, map1, map2, map3, map4 = self.fpn(x)
 
-        map4 = nn.functional.upsample(self.head4(map4), scale_factor=8, mode="nearest")
-        map3 = nn.functional.upsample(self.head3(map3), scale_factor=4, mode="nearest")
-        map2 = nn.functional.upsample(self.head2(map2), scale_factor=2, mode="nearest")
-        map1 = nn.functional.upsample(self.head1(map1), scale_factor=1, mode="nearest")
+        # map4 = nn.functional.upsample(self.head4(map4), scale_factor=8, mode="nearest")
+        # map3 = nn.functional.upsample(self.head3(map3), scale_factor=4, mode="nearest")
+        # map2 = nn.functional.upsample(self.head2(map2), scale_factor=2, mode="nearest")
+        # map1 = nn.functional.upsample(self.head1(map1), scale_factor=1, mode="nearest")
+        map4 = nn.functional.interpolate(self.head4(map4), scale_factor=8, mode="nearest")
+        map3 = nn.functional.interpolate(self.head3(map3), scale_factor=4, mode="nearest")
+        map2 = nn.functional.interpolate(self.head2(map2), scale_factor=2, mode="nearest")
+        map1 = nn.functional.interpolate(self.head1(map1), scale_factor=1, mode="nearest")
 
         smoothed = self.smooth(torch.cat([map4, map3, map2, map1], dim=1))
-        smoothed = nn.functional.upsample(smoothed, scale_factor=2, mode="nearest")
+        # smoothed = nn.functional.upsample(smoothed, scale_factor=2, mode="nearest")
+        smoothed = nn.functional.interpolate(smoothed, scale_factor=2, mode="nearest")
         smoothed = self.smooth2(smoothed + map0)
-        smoothed = nn.functional.upsample(smoothed, scale_factor=2, mode="nearest")
+        # smoothed = nn.functional.upsample(smoothed, scale_factor=2, mode="nearest")
+        smoothed = nn.functional.interpolate(smoothed, scale_factor=2, mode="nearest")
 
         final = self.final(smoothed)
         res = torch.tanh(final) + x
@@ -161,7 +167,10 @@ class FPN(nn.Module):
         pad = (1, 2, 1, 2)  # pad last dim by 1 on each side
         pad1 = (0, 1, 0, 1)
         map4 = lateral4
-        map3 = self.td1(lateral3 + nn.functional.upsample(map4, scale_factor=2, mode="nearest"))
-        map2 = self.td2(F.pad(lateral2, pad, "reflect") + nn.functional.upsample(map3, scale_factor=2, mode="nearest"))
-        map1 = self.td3(lateral1 + nn.functional.upsample(map2, scale_factor=2, mode="nearest"))
+        # map3 = self.td1(lateral3 + nn.functional.upsample(map4, scale_factor=2, mode="nearest"))
+        map3 = self.td1(lateral3 + nn.functional.interpolate(map4, scale_factor=2, mode="nearest"))
+        # map2 = self.td2(F.pad(lateral2, pad, "reflect") + nn.functional.upsample(map3, scale_factor=2, mode="nearest"))
+        map2 = self.td2(F.pad(lateral2, pad, "reflect") + nn.functional.interpolate(map3, scale_factor=2, mode="nearest"))
+        # map1 = self.td3(lateral1 + nn.functional.upsample(map2, scale_factor=2, mode="nearest"))
+        map1 = self.td3(lateral1 + nn.functional.interpolate(map2, scale_factor=2, mode="nearest"))
         return F.pad(lateral0, pad1, "reflect"), map1, map2, map3, map4

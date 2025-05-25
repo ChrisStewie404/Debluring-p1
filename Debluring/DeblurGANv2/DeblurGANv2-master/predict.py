@@ -1,7 +1,7 @@
 import os
 from glob import glob
 from typing import Optional
-
+import pandas as pd
 import cv2
 import numpy as np
 import torch
@@ -53,7 +53,7 @@ class Predictor:
                       'pad_width': ((0, min_height - h), (0, min_width - w), (0, 0))
                       }
         x = np.pad(x, **pad_params)
-        mask = np.pad(mask, **pad_params)
+        print(x)
 
         return map(self._array_to_batch, (x, mask)), h, w
 
@@ -66,6 +66,7 @@ class Predictor:
 
     def __call__(self, img: np.ndarray, mask: Optional[np.ndarray], ignore_mask=True) -> np.ndarray:
         (img, mask), h, w = self._preprocess(img, mask)
+        
         with torch.no_grad():
             if torch.cuda.is_available():
                 inputs = [img.cuda()]
@@ -99,7 +100,7 @@ def process_video(pairs, predictor, output_dir):
 def main(img_pattern: str,
          mask_pattern: Optional[str] = None,
          weights_path='fpn_inception.h5',
-         out_dir='submit/',
+         out_dir='submit_orig/',
          side_by_side: bool = False,
          video: bool = False):
     def sorted_glob(pattern):
