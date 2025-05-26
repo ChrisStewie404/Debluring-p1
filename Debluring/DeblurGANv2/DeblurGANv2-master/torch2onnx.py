@@ -18,12 +18,29 @@ from fire import Fire
 class InstanceNormAlternative(nn.Module):
     def __init__(self):
         super().__init__()
-        self.eps=1e-6
+        self.eps=1e-5
 
     def forward(self, inp: torch.Tensor) -> torch.Tensor:
         assert (len(inp.shape)==4), "InstanceNorm Shape Error!"
         desc = 1 / (inp.var(axis=[2, 3], keepdim=True, unbiased=False) + self.eps) ** 0.5
         retval = (inp - inp.mean(axis=[2, 3], keepdim=True)) * desc
+        return retval
+    
+class BatchNormAlternative(nn.Module):
+    def __init__(self, m: nn.BatchNorm2d):
+        super().__init__()
+        self.eps=1e-5
+        self.affine = m.affine
+        if self.affine:
+            self.gamma = m.weight.reshape(1,-1,1,1).clone()
+            self.beta = m.bias.reshape(1,-1,1,1).clone()
+
+    def forward(self, inp: torch.Tensor) -> torch.Tensor:
+        assert (len(inp.shape)==4), "BatchNorm Shape Error!"
+        desc = 1 / (inp.var(axis=[0, 2, 3], keepdim=True, unbiased=False) + self.eps) ** 0.5
+        retval = (inp - inp.mean(axis=[0, 2, 3], keepdim=True)) * desc
+        if self.affine:
+            retval = retval*self.gamma + self.beta
         return retval
     
 class Predictor:
@@ -55,6 +72,17 @@ class Predictor:
         for *parent, id in replace_list:
             model_g.get_submodule('.'.join(parent))[int(id)] = InstanceNormAlternative()
 
+        replace_list =[k.split('.') 
+                        for k, m in model_g.named_modules(remove_duplicate=False) 
+                        if isinstance(m, torch.nn.BatchNorm2d)]
+        for *parent, id in replace_list:
+            if not isinstance(getattr(model_g.get_submodule('.'.join(parent)), id), torch.nn.BatchNorm2d):
+                continue
+            if id.isdecimal():
+                model_g.get_submodule('.'.join(parent))[int(id)] = BatchNormAlternative(model_g.get_submodule('.'.join(parent))[int(id)])
+            else:
+                setattr(model_g.get_submodule('.'.join(parent)), id, BatchNormAlternative(getattr(model_g.get_submodule('.'.join(parent)), id)))
+
         model = model_g
         if torch.cuda.is_available():
             # model.load_state_dict(torch.load(weights_path)['model'])
@@ -63,7 +91,8 @@ class Predictor:
             # model.load_state_dict(torch.load(weights_path,map_location=torch.device('cpu'))['model'])
             self.model = model.cpu()
 
-        self.model.train(True)
+        # self.model.train(True)
+        self.model.train(False)
         # GAN inference should be in train mode to use actual stats in norm layers,
         # it's not a bug
         self.normalize_fn = get_normalize()
@@ -180,6 +209,16 @@ if __name__ == "__main__":
     img_dir = './test_img'
     weights_path = 'fpn_inception.h5'
     
+    # result verification
+    # side_by_side = False
+    # predictor = Predictor(weights_path=weights_path)
+    # img = cv2.cvtColor(cv2.imread(os.path.join(img_dir, "000027.png")), cv2.COLOR_BGR2RGB)
+    # pred = predictor(img, None)
+    # if side_by_side:
+    #     pred = np.hstack((img, pred))
+    # pred = cv2.cvtColor(pred, cv2.COLOR_RGB2BGR)
+    # cv2.imwrite(os.path.join(".", "test.png"), pred)
+
     # Generate model
     with open('config/config.yaml',encoding='utf-8') as cfg:
         config = yaml.load(cfg,Loader=yaml.FullLoader)
@@ -200,11 +239,22 @@ if __name__ == "__main__":
             new_state_dict[k] = v
         model_g.load_state_dict(new_state_dict)
     
-    replace_ins_list =[k.split('.') 
+    replace_list =[k.split('.') 
                     for k, m in model_g.named_modules(remove_duplicate=False) 
                     if isinstance(m, torch.nn.InstanceNorm2d)]
-    for *parent, id in replace_ins_list:
+    for *parent, id in replace_list:
         model_g.get_submodule('.'.join(parent))[int(id)] = InstanceNormAlternative()
+
+    replace_list =[k.split('.') 
+                    for k, m in model_g.named_modules(remove_duplicate=False) 
+                    if isinstance(m, torch.nn.BatchNorm2d)]
+    for *parent, id in replace_list:
+        if not isinstance(getattr(model_g.get_submodule('.'.join(parent)), id), torch.nn.BatchNorm2d):
+            continue
+        if id.isdecimal():
+            model_g.get_submodule('.'.join(parent))[int(id)] = BatchNormAlternative(model_g.get_submodule('.'.join(parent))[int(id)])
+        else:
+            setattr(model_g.get_submodule('.'.join(parent)), id, BatchNormAlternative(getattr(model_g.get_submodule('.'.join(parent)), id)))
 
     with torch.no_grad():
         example_input = (torch.randn((1,3,736,1312)),)   
@@ -212,8 +262,20 @@ if __name__ == "__main__":
             model_g,
             example_input,
             "FPNInception_736_1312.onnx",
+            export_params = True,
             # dynamo=True,
             opset_version=15,
             # autograd_inlining=False,
-            # dynamic_axes=None,
+            dynamic_axes=None,
         )
+
+
+    # unit test
+    # m = nn.InstanceNorm2d(1,track_running_stats=True)
+    # inp = torch.tensor([1.,2.,3.,4.]).reshape(1,1,2,2)
+    # m.running_mean = torch.tensor([2.])
+    # m.running_var = torch.tensor([1.])
+    # om = InstanceNormAlternative(m)
+    # m.train(True)
+    # print(m(inp), m.running_mean, m.running_var)
+    # print(om(inp), om.running_mean, om.running_var)
