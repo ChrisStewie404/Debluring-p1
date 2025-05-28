@@ -82,7 +82,6 @@ if __name__ == '__main__':
                 'pad_width' : ((0,min_h - h), (0,min_w - w),(0, 0))
             }
             img = np.pad(img, **pad_params)
-            print(img)
             
             # mask = np.pad(mask, **pad_params)
 

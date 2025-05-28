@@ -25,7 +25,8 @@ class Predictor:
             model.load_state_dict(torch.load(weights_path,map_location=torch.device('cpu'))['model'])
             self.model = model.cpu()
 
-        self.model.train(True)
+        # self.model.train(True)
+        self.model.train(False)
         # GAN inference should be in train mode to use actual stats in norm layers,
         # it's not a bug
         self.normalize_fn = get_normalize()
@@ -100,7 +101,7 @@ def process_video(pairs, predictor, output_dir):
 def main(img_pattern: str,
          mask_pattern: Optional[str] = None,
          weights_path='fpn_inception.h5',
-         out_dir='submit_orig/',
+         out_dir='submit_notrain/',
          side_by_side: bool = False,
          video: bool = False):
     def sorted_glob(pattern):
