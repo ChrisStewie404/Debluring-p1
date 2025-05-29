@@ -52,8 +52,9 @@ class yolo11onnx:
 
     def draw_detections(self,img,box,score,class_id):
         x1,y1,w,h = box
+        print(f"read height {h}")
         color = self.color_palette[class_id]
-        cv2.rectangle(img,(int(x1),int(y1),int(x1+w),int(y1+h)),color,2)
+        cv2.rectangle(img,(int(x1),int(y1)),(int(x1+w),int(y1+h)),color,2)
         label = f"{self.name_classes[class_id]}: {score:.2f}"
 
         (label_w, label_h), _ = cv2.getTextSize(label,cv2.FONT_HERSHEY_SIMPLEX,0.5,1)
@@ -61,9 +62,9 @@ class yolo11onnx:
         label_y = y1-10 if y1-10 > label_h else y1+10
 
         cv2.rectangle(
-            img, (label_x,label_y-label_h),(label_x+label_w,label_y+label_h),color,
+            img, (label_x,label_y+label_h),(label_x+label_w,label_y+label_h),color,
         )
-        cv2.putText(img,label,(label_x,label_y),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,0),1)
+        cv2.putText(img,label,(label_x,label_y),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,0,0),2)
 
 
 if __name__ == '__main__':
@@ -169,7 +170,7 @@ if __name__ == '__main__':
                 box = boxes[i]
                 score = scores[i]
                 class_id = class_ids[i]
-                print(yolo_processor.name_classes[class_id])
+                # print(yolo_processor.name_classes[class_id])
                 yolo_processor.draw_detections(d_img,box,score,class_id)
 
             cv2.imwrite(os.path.join(final_out_dir,name),d_img)
