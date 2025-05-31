@@ -12,7 +12,6 @@ import re
 def get_normalize():
     normalize = albu.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
     normalize = albu.Compose([normalize], additional_targets={'target': 'image'})
-
     def process(a, b):
         r = normalize(image=a, target=b)
         return r['image'], r['target']
@@ -52,7 +51,6 @@ class yolo11onnx:
 
     def draw_detections(self,img,box,score,class_id):
         x1,y1,w,h = box
-        print(f"read height {h}")
         color = self.color_palette[class_id]
         cv2.rectangle(img,(int(x1),int(y1)),(int(x1+w),int(y1+h)),color,2)
         label = f"{self.name_classes[class_id]}: {score:.2f}"
@@ -97,83 +95,86 @@ if __name__ == '__main__':
             f_img, f_mask = pair
             img_o = cv2.imread(f_img)
             img = cv2.cvtColor(img_o,cv2.COLOR_BGR2RGB)
-            img,_ = normalize_fn(img,img)
-            img_h, img_w, _ = img.shape
-            block_size = 32
-            min_h = (img_h // block_size + 1) * block_size
-            min_w = (img_w // block_size + 1) * block_size
-            pad_params = {
-                'mode' : 'constant',
-                'constant_values' : 0,
-                'pad_width' : ((0,min_h - img_h), (0,min_w - img_w),(0, 0))
-            }
-            img = np.pad(img, **pad_params)
+            t_img = np.array([[[1,1,1],[1,1,1]],[[1,1,1],[1,1,1]]])
+            t_img, _ = normalize_fn(t_img,t_img)
+            print(t_img)
+            # img,_ = normalize_fn(img,img)
+            # img_h, img_w, _ = img.shape
+            # block_size = 32
+            # min_h = (img_h // block_size + 1) * block_size
+            # min_w = (img_w // block_size + 1) * block_size
+            # pad_params = {
+            #     'mode' : 'constant',
+            #     'constant_values' : 0,
+            #     'pad_width' : ((0,min_h - img_h), (0,min_w - img_w),(0, 0))
+            # }
+            # img = np.pad(img, **pad_params)
 
-            # (H,W,C) to (C,H,W)
-            img_t = img.transpose((2,0,1))
-            # add batch size dimension
-            img_n = np.expand_dims(img_t,axis=0)
-            fpn_cess = ort.InferenceSession(fpn_path)
-            outputs = fpn_cess.run(None,{'input.1': img_n})
+            # # (H,W,C) to (C,H,W)
+            # img_t = img.transpose((2,0,1))
+            # # add batch size dimension
+            # img_n = np.expand_dims(img_t,axis=0)
+            # fpn_cess = ort.InferenceSession(fpn_path)
+            # outputs = fpn_cess.run(None,{'input.1': img_n})
 
-            # fpn postprocess
-            output,  = outputs
-            d_imgnp = output[0]
-            d_imgnp = (np.transpose(d_imgnp,(1,2,0)) + 1) / 2.0 * 255.0
-            d_imgnp = d_imgnp.astype(np.uint8)
-            d_img = cv2.cvtColor(d_imgnp,cv2.COLOR_RGB2BGR)[:img_h,:img_w,:]
-            cv2.imwrite(os.path.join(deblur_out_dir,name),d_img)
+            # # fpn postprocess
+            # output,  = outputs
+            # d_imgnp = output[0]
+            # d_imgnp = (np.transpose(d_imgnp,(1,2,0)) + 1) / 2.0 * 255.0
+            # d_imgnp = d_imgnp.astype(np.uint8)
+            # d_img = cv2.cvtColor(d_imgnp,cv2.COLOR_RGB2BGR)[:img_h,:img_w,:]
+            # cv2.imwrite(os.path.join(deblur_out_dir,name),d_img)
 
-            # yolo preprocess
-            h,w,_ = d_img.shape
-            p_img = cv2.cvtColor(d_img,cv2.COLOR_BGR2RGB)
-            p_img = cv2.resize(p_img,(640,640))
-            p_imgnp = np.array(p_img) / 255.0
-            p_imgnp = np.transpose(p_imgnp,(2,0,1))
-            p_imgnp = np.expand_dims(p_imgnp,axis=0).astype(np.float32)
+            # # yolo preprocess
+            # h,w,_ = d_img.shape
+            # p_img = cv2.cvtColor(d_img,cv2.COLOR_BGR2RGB)
+            # p_img = cv2.resize(p_img,(640,640))
+            # p_imgnp = np.array(p_img) / 255.0
+            # p_imgnp = np.transpose(p_imgnp,(2,0,1))
+            # p_imgnp = np.expand_dims(p_imgnp,axis=0).astype(np.float32)
 
-            yolo_cess = ort.InferenceSession(yolo_path)
-            outputs = yolo_cess.run(None,{'images': p_imgnp})
+            # yolo_cess = ort.InferenceSession(yolo_path)
+            # outputs = yolo_cess.run(None,{'images': p_imgnp})
             
 
-            # yolo postprocess
-            output = np.transpose(np.squeeze(outputs[0]))
-            rows = output.shape[0]
+            # # yolo postprocess
+            # output = np.transpose(np.squeeze(outputs[0]))
+            # rows = output.shape[0]
 
-            thrshld = 0.4
-            iou_thrshld = 0.5
-            boxes = []
-            scores = []
-            class_ids = []
+            # thrshld = 0.4
+            # iou_thrshld = 0.5
+            # boxes = []
+            # scores = []
+            # class_ids = []
 
-            x_fac = img_w / 640
-            y_fac = img_h / 640
+            # x_fac = img_w / 640
+            # y_fac = img_h / 640
 
-            for i in range(rows):
-                classes_scores = output[i][4:]
-                max_score = np.amax(classes_scores)
-                if max_score >= thrshld:
-                    class_id = np.argmax(classes_scores)
-                    x,y,w,h = output[i][0], output[i][1], output[i][2], output[i][3]
+            # for i in range(rows):
+            #     classes_scores = output[i][4:]
+            #     max_score = np.amax(classes_scores)
+            #     if max_score >= thrshld:
+            #         class_id = np.argmax(classes_scores)
+            #         x,y,w,h = output[i][0], output[i][1], output[i][2], output[i][3]
 
-                    left = int((x-w/2)*x_fac)
-                    top = int((y-h/2)*y_fac)
-                    width = int(w*x_fac)
-                    height = int(h*y_fac)
+            #         left = int((x-w/2)*x_fac)
+            #         top = int((y-h/2)*y_fac)
+            #         width = int(w*x_fac)
+            #         height = int(h*y_fac)
 
-                    class_ids.append(class_id)
-                    scores.append(max_score)
-                    boxes.append([left,top,width,height])
+            #         class_ids.append(class_id)
+            #         scores.append(max_score)
+            #         boxes.append([left,top,width,height])
 
-            indices = cv2.dnn.NMSBoxes(boxes,scores,thrshld,iou_thrshld)
-            for i in indices:
-                box = boxes[i]
-                score = scores[i]
-                class_id = class_ids[i]
-                # print(yolo_processor.name_classes[class_id])
-                yolo_processor.draw_detections(d_img,box,score,class_id)
+            # indices = cv2.dnn.NMSBoxes(boxes,scores,thrshld,iou_thrshld)
+            # for i in indices:
+            #     box = boxes[i]
+            #     score = scores[i]
+            #     class_id = class_ids[i]
+            #     # print(yolo_processor.name_classes[class_id])
+            #     yolo_processor.draw_detections(d_img,box,score,class_id)
 
-            cv2.imwrite(os.path.join(final_out_dir,name),d_img)
+            # cv2.imwrite(os.path.join(final_out_dir,name),d_img)
 
             
 

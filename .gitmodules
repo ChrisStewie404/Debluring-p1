@@ -1,0 +1,3 @@
+[submodule "renesas_evh/MNN_renesas"]
+	path = renesas_evh/MNN_renesas
+	url = https://github.com/Embedded-AI-Systems/MNN-NPU.git

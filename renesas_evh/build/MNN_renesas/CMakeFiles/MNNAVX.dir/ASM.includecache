@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/avx/_AVX_MNNPackedSparseMatMulEpx1EFMA_ASM.S
+../MNNAsmGlobal.h
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/avx/_AVX_MNNPackedSparseMatMulEpx4EFMA_ASM.S
+../MNNAsmGlobal.h
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+

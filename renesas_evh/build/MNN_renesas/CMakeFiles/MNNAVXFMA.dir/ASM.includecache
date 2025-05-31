@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/avxfma/_AVX_MNNGemmFloatUnitMainFMA.S
+../MNNAsmGlobal.h
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/avxfma/_AVX_MNNGemmFloatUnitMainFMA6x16.S
+../MNNAsmGlobal.h
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/avxfma/_AVX_MNNGemmFloatUnitMainFMA_Fused.S
+../MNNAsmGlobal.h
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/avxfma/_AVX_MNNPackedSparseMatMulEpx1NFMA_ASM.S
+../MNNAsmGlobal.h
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/avxfma/_AVX_MNNPackedSparseMatMulEpx4NFMA_ASM.S
+../MNNAsmGlobal.h
+/home/anllinux/MLsys/Debluring-p1/renesas_evh/MNN_renesas/source/backend/cpu/x86_x64/MNNAsmGlobal.h
+
