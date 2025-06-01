@@ -1,2 +1,0 @@
-/usr/bin/ar qc libLib_mnn.a 
-/usr/bin/ranlib libLib_mnn.a
