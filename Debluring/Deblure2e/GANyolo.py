@@ -95,10 +95,9 @@ if __name__ == '__main__':
             f_img, f_mask = pair
             img_o = cv2.imread(f_img)
             img = cv2.cvtColor(img_o,cv2.COLOR_BGR2RGB)
-            t_img = np.array([[[1,1,1],[1,1,1]],[[1,1,1],[1,1,1]]])
-            t_img, _ = normalize_fn(t_img,t_img)
-            print(t_img)
+            print(img[0].size)
             # img,_ = normalize_fn(img,img)
+            # print(img)
             # img_h, img_w, _ = img.shape
             # block_size = 32
             # min_h = (img_h // block_size + 1) * block_size
