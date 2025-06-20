@@ -117,62 +117,62 @@ if __name__ == '__main__':
             # # fpn postprocess
             output,  = outputs
             d_imgnp = output[0]
-            print(d_imgnp[0][0][0:6])
             d_imgnp = (np.transpose(d_imgnp,(1,2,0)) + 1) / 2.0 * 255.0
             d_imgnp = d_imgnp.astype(np.uint8)
             d_img = cv2.cvtColor(d_imgnp,cv2.COLOR_RGB2BGR)[:img_h,:img_w,:]
             cv2.imwrite(os.path.join(deblur_out_dir,name),d_img)
 
-            # # yolo preprocess
-            # h,w,_ = d_img.shape
-            # p_img = cv2.cvtColor(d_img,cv2.COLOR_BGR2RGB)
-            # p_img = cv2.resize(p_img,(640,640))
-            # p_imgnp = np.array(p_img) / 255.0
-            # p_imgnp = np.transpose(p_imgnp,(2,0,1))
-            # p_imgnp = np.expand_dims(p_imgnp,axis=0).astype(np.float32)
+            # yolo preprocess
+            h,w,_ = d_img.shape
+            p_img = cv2.cvtColor(d_img,cv2.COLOR_BGR2RGB)
+            p_img = cv2.resize(p_img,(640,640))
+            p_imgnp = np.array(p_img) / 255.0
+            p_imgnp = np.transpose(p_imgnp,(2,0,1))
+            p_imgnp = np.expand_dims(p_imgnp,axis=0).astype(np.float32)
+            print(p_imgnp.shape)
 
-            # yolo_cess = ort.InferenceSession(yolo_path)
-            # outputs = yolo_cess.run(None,{'images': p_imgnp})
+            yolo_cess = ort.InferenceSession(yolo_path)
+            outputs = yolo_cess.run(None,{'images': p_imgnp})
             
 
-            # # yolo postprocess
-            # output = np.transpose(np.squeeze(outputs[0]))
-            # rows = output.shape[0]
+            # yolo postprocess
+            output = np.transpose(np.squeeze(outputs[0]))
+            rows = output.shape[0]
 
-            # thrshld = 0.4
-            # iou_thrshld = 0.5
-            # boxes = []
-            # scores = []
-            # class_ids = []
+            thrshld = 0.4
+            iou_thrshld = 0.5
+            boxes = []
+            scores = []
+            class_ids = []
 
-            # x_fac = img_w / 640
-            # y_fac = img_h / 640
+            x_fac = img_w / 640
+            y_fac = img_h / 640
 
-            # for i in range(rows):
-            #     classes_scores = output[i][4:]
-            #     max_score = np.amax(classes_scores)
-            #     if max_score >= thrshld:
-            #         class_id = np.argmax(classes_scores)
-            #         x,y,w,h = output[i][0], output[i][1], output[i][2], output[i][3]
+            for i in range(rows):
+                classes_scores = output[i][4:]
+                max_score = np.amax(classes_scores)
+                if max_score >= thrshld:
+                    class_id = np.argmax(classes_scores)
+                    x,y,w,h = output[i][0], output[i][1], output[i][2], output[i][3]
 
-            #         left = int((x-w/2)*x_fac)
-            #         top = int((y-h/2)*y_fac)
-            #         width = int(w*x_fac)
-            #         height = int(h*y_fac)
+                    left = int((x-w/2)*x_fac)
+                    top = int((y-h/2)*y_fac)
+                    width = int(w*x_fac)
+                    height = int(h*y_fac)
 
-            #         class_ids.append(class_id)
-            #         scores.append(max_score)
-            #         boxes.append([left,top,width,height])
+                    class_ids.append(class_id)
+                    scores.append(max_score)
+                    boxes.append([left,top,width,height])
 
-            # indices = cv2.dnn.NMSBoxes(boxes,scores,thrshld,iou_thrshld)
-            # for i in indices:
-            #     box = boxes[i]
-            #     score = scores[i]
-            #     class_id = class_ids[i]
-            #     # print(yolo_processor.name_classes[class_id])
-            #     yolo_processor.draw_detections(d_img,box,score,class_id)
+            indices = cv2.dnn.NMSBoxes(boxes,scores,thrshld,iou_thrshld)
+            for i in indices:
+                box = boxes[i]
+                score = scores[i]
+                class_id = class_ids[i]
+                # print(yolo_processor.name_classes[class_id])
+                yolo_processor.draw_detections(d_img,box,score,class_id)
 
-            # cv2.imwrite(os.path.join(final_out_dir,name),d_img)
+            cv2.imwrite(os.path.join(final_out_dir,name),d_img)
 
             
 
