@@ -95,34 +95,33 @@ if __name__ == '__main__':
             f_img, f_mask = pair
             img_o = cv2.imread(f_img)
             img = cv2.cvtColor(img_o,cv2.COLOR_BGR2RGB)
-            print(img[0].size)
-            # img,_ = normalize_fn(img,img)
-            # print(img)
-            # img_h, img_w, _ = img.shape
-            # block_size = 32
-            # min_h = (img_h // block_size + 1) * block_size
-            # min_w = (img_w // block_size + 1) * block_size
-            # pad_params = {
-            #     'mode' : 'constant',
-            #     'constant_values' : 0,
-            #     'pad_width' : ((0,min_h - img_h), (0,min_w - img_w),(0, 0))
-            # }
-            # img = np.pad(img, **pad_params)
+            img,_ = normalize_fn(img,img)
+            img_h, img_w, _ = img.shape
+            block_size = 32
+            min_h = (img_h // block_size + 1) * block_size
+            min_w = (img_w // block_size + 1) * block_size
+            pad_params = {
+                'mode' : 'constant',
+                'constant_values' : 0,
+                'pad_width' : ((0,min_h - img_h), (0,min_w - img_w),(0, 0))
+            }
+            img = np.pad(img, **pad_params)
 
-            # # (H,W,C) to (C,H,W)
-            # img_t = img.transpose((2,0,1))
-            # # add batch size dimension
-            # img_n = np.expand_dims(img_t,axis=0)
-            # fpn_cess = ort.InferenceSession(fpn_path)
-            # outputs = fpn_cess.run(None,{'input.1': img_n})
+            # (H,W,C) to (C,H,W)
+            img_t = img.transpose((2,0,1))
+            # add batch size dimension
+            img_n = np.expand_dims(img_t,axis=0)
+            fpn_cess = ort.InferenceSession(fpn_path)
+            outputs = fpn_cess.run(None,{'input.1': img_n})
 
             # # fpn postprocess
-            # output,  = outputs
-            # d_imgnp = output[0]
-            # d_imgnp = (np.transpose(d_imgnp,(1,2,0)) + 1) / 2.0 * 255.0
-            # d_imgnp = d_imgnp.astype(np.uint8)
-            # d_img = cv2.cvtColor(d_imgnp,cv2.COLOR_RGB2BGR)[:img_h,:img_w,:]
-            # cv2.imwrite(os.path.join(deblur_out_dir,name),d_img)
+            output,  = outputs
+            d_imgnp = output[0]
+            print(d_imgnp[0][0][0:6])
+            d_imgnp = (np.transpose(d_imgnp,(1,2,0)) + 1) / 2.0 * 255.0
+            d_imgnp = d_imgnp.astype(np.uint8)
+            d_img = cv2.cvtColor(d_imgnp,cv2.COLOR_RGB2BGR)[:img_h,:img_w,:]
+            cv2.imwrite(os.path.join(deblur_out_dir,name),d_img)
 
             # # yolo preprocess
             # h,w,_ = d_img.shape
