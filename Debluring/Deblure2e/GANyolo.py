@@ -132,6 +132,7 @@ if __name__ == '__main__':
             # p_imgnp = np.array(p_img) / 255.0
             # p_imgnp = np.transpose(p_imgnp,(2,0,1))
             # p_imgnp = np.expand_dims(p_imgnp,axis=0).astype(np.float32)
+            # print(p_imgnp.shape)
 
             # yolo_cess = ort.InferenceSession(yolo_path)
             # outputs = yolo_cess.run(None,{'images': p_imgnp})
