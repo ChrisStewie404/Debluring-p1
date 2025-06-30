@@ -1,0 +1,1 @@
+images_test is blurry images, aiming to satisfy the code.

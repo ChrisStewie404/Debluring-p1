@@ -125,14 +125,13 @@ if __name__ == '__main__':
             # d_img = cv2.cvtColor(d_imgnp,cv2.COLOR_RGB2BGR)[:img_h,:img_w,:]
             # cv2.imwrite(os.path.join(deblur_out_dir,name),d_img)
 
-            # # yolo preprocess
+            # yolo preprocess
             # h,w,_ = d_img.shape
             # p_img = cv2.cvtColor(d_img,cv2.COLOR_BGR2RGB)
             # p_img = cv2.resize(p_img,(640,640))
             # p_imgnp = np.array(p_img) / 255.0
             # p_imgnp = np.transpose(p_imgnp,(2,0,1))
             # p_imgnp = np.expand_dims(p_imgnp,axis=0).astype(np.float32)
-            # print(p_imgnp.shape)
 
             # yolo_cess = ort.InferenceSession(yolo_path)
             # outputs = yolo_cess.run(None,{'images': p_imgnp})
@@ -172,7 +171,6 @@ if __name__ == '__main__':
             #     box = boxes[i]
             #     score = scores[i]
             #     class_id = class_ids[i]
-            #     # print(yolo_processor.name_classes[class_id])
             #     yolo_processor.draw_detections(d_img,box,score,class_id)
 
             # cv2.imwrite(os.path.join(final_out_dir,name),d_img)

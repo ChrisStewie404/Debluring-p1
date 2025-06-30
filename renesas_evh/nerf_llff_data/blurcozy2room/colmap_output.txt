@@ -1,0 +1,2409 @@
+
+==============================================================================
+Feature extraction
+==============================================================================
+
+Processed file [1/29]
+  Name:            rgb_blur_000.png
+  Dimensions:      600 x 400
+  Camera:          #1 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        711
+Processed file [2/29]
+  Name:            rgb_blur_001.png
+  Dimensions:      600 x 400
+  Camera:          #2 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        567
+Processed file [3/29]
+  Name:            rgb_blur_002.png
+  Dimensions:      600 x 400
+  Camera:          #3 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        582
+Processed file [4/29]
+  Name:            rgb_blur_003.png
+  Dimensions:      600 x 400
+  Camera:          #4 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        1114
+Processed file [5/29]
+  Name:            rgb_blur_004.png
+  Dimensions:      600 x 400
+  Camera:          #5 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        649
+Processed file [6/29]
+  Name:            rgb_blur_005.png
+  Dimensions:      600 x 400
+  Camera:          #6 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        1540
+Processed file [7/29]
+  Name:            rgb_blur_006.png
+  Dimensions:      600 x 400
+  Camera:          #7 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        683
+Processed file [8/29]
+  Name:            rgb_blur_007.png
+  Dimensions:      600 x 400
+  Camera:          #8 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        991
+Processed file [9/29]
+  Name:            rgb_blur_008.png
+  Dimensions:      600 x 400
+  Camera:          #9 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        1122
+Processed file [10/29]
+  Name:            rgb_blur_009.png
+  Dimensions:      600 x 400
+  Camera:          #10 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        509
+Processed file [11/29]
+  Name:            rgb_blur_010.png
+  Dimensions:      600 x 400
+  Camera:          #11 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        353
+Processed file [12/29]
+  Name:            rgb_blur_011.png
+  Dimensions:      600 x 400
+  Camera:          #12 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        714
+Processed file [13/29]
+  Name:            rgb_blur_012.png
+  Dimensions:      600 x 400
+  Camera:          #13 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        546
+Processed file [14/29]
+  Name:            rgb_blur_013.png
+  Dimensions:      600 x 400
+  Camera:          #14 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        556
+Processed file [15/29]
+  Name:            rgb_blur_014.png
+  Dimensions:      600 x 400
+  Camera:          #15 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        445
+Processed file [16/29]
+  Name:            rgb_blur_015.png
+  Dimensions:      600 x 400
+  Camera:          #16 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        498
+Processed file [17/29]
+  Name:            rgb_blur_016.png
+  Dimensions:      600 x 400
+  Camera:          #17 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        718
+Processed file [18/29]
+  Name:            rgb_blur_017.png
+  Dimensions:      600 x 400
+  Camera:          #18 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        407
+Processed file [19/29]
+  Name:            rgb_blur_018.png
+  Dimensions:      600 x 400
+  Camera:          #19 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        808
+Processed file [20/29]
+  Name:            rgb_blur_019.png
+  Dimensions:      600 x 400
+  Camera:          #20 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        1281
+Processed file [21/29]
+  Name:            rgb_blur_020.png
+  Dimensions:      600 x 400
+  Camera:          #21 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        817
+Processed file [22/29]
+  Name:            rgb_blur_021.png
+  Dimensions:      600 x 400
+  Camera:          #22 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        475
+Processed file [23/29]
+  Name:            rgb_blur_022.png
+  Dimensions:      600 x 400
+  Camera:          #23 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        426
+Processed file [24/29]
+  Name:            rgb_blur_023.png
+  Dimensions:      600 x 400
+  Camera:          #24 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        684
+Processed file [25/29]
+  Name:            rgb_blur_024.png
+  Dimensions:      600 x 400
+  Camera:          #25 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        614
+Processed file [26/29]
+  Name:            rgb_blur_025.png
+  Dimensions:      600 x 400
+  Camera:          #26 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        402
+Processed file [27/29]
+  Name:            rgb_blur_026.png
+  Dimensions:      600 x 400
+  Camera:          #27 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        610
+Processed file [28/29]
+  Name:            rgb_blur_027.png
+  Dimensions:      600 x 400
+  Camera:          #28 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        983
+Processed file [29/29]
+  Name:            rgb_blur_028.png
+  Dimensions:      600 x 400
+  Camera:          #29 - SIMPLE_PINHOLE
+  Focal Length:    720.00px
+  Features:        581
+Elapsed time: 0.008 [minutes]
+
+==============================================================================
+Exhaustive feature matching
+==============================================================================
+
+Matching block [1/1, 1/1] in 0.295s
+Elapsed time: 0.006 [minutes]
+
+==============================================================================
+Loading database
+==============================================================================
+
+Loading cameras... 29 in 0.000s
+Loading matches... 405 in 0.001s
+Loading images... 29 in 0.001s (connected 29)
+Building correspondence graph... in 0.004s (ignored 0)
+
+Elapsed time: 0.000 [minutes]
+
+
+==============================================================================
+Finding good initial image pair
+==============================================================================
+
+
+==============================================================================
+Initializing with image pair #9 and #4
+==============================================================================
+
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  7.800256e+01    0.00e+00    1.06e+02   0.00e+00   0.00e+00  1.00e+04        0    1.08e-03    4.38e-03
+   1  7.337270e+01    4.63e+00    1.08e+02   1.56e+01   9.52e-01  3.00e+04        1    2.01e-03    6.41e-03
+   2  7.235787e+01    1.01e+00    6.27e+01   1.72e+01   1.11e+00  9.00e+04        1    5.50e-04    6.97e-03
+   3  7.212827e+01    2.30e-01    2.06e+02   1.96e+01   6.23e-01  9.14e+04        1    5.50e-04    7.53e-03
+   4  7.190013e+01    2.28e-01    6.19e+01   6.79e+00   9.83e-01  2.74e+05        1    5.48e-04    8.08e-03
+   5  7.187384e+01    2.63e-02    1.21e+02   2.42e+00   6.95e-01  2.91e+05        1    5.48e-04    8.64e-03
+   6  7.188459e+01   -1.07e-02    1.21e+02   5.97e+00  -3.99e-01  1.46e+05        1    2.95e-04    8.94e-03
+   7  7.185497e+01    1.89e-02    2.35e+01   2.66e+00   9.08e-01  3.20e+05        1    5.27e-04    9.47e-03
+   8  7.189731e+01   -4.23e-02    2.35e+01   7.02e+00  -2.75e+00  1.60e+05        1    2.96e-04    9.77e-03
+   9  7.184958e+01    5.39e-03    2.40e+01   3.44e+00   5.91e-01  1.61e+05        1    5.26e-04    1.03e-02
+  10  7.184331e+01    6.27e-03    2.22e+01   3.65e+00   6.09e-01  1.63e+05        1    5.48e-04    1.09e-02
+  11  7.183696e+01    6.35e-03    2.09e+01   3.67e+00   6.17e-01  1.65e+05        1    5.48e-04    1.14e-02
+  12  7.183081e+01    6.15e-03    2.00e+01   3.64e+00   6.19e-01  1.67e+05        1    5.48e-04    1.20e-02
+  13  7.182486e+01    5.94e-03    1.92e+01   3.59e+00   6.24e-01  1.70e+05        1    6.10e-04    1.26e-02
+  14  7.181918e+01    5.69e-03    1.84e+01   3.53e+00   6.27e-01  1.72e+05        1    5.58e-04    1.31e-02
+  15  7.181374e+01    5.44e-03    1.77e+01   3.47e+00   6.30e-01  1.76e+05        1    5.55e-04    1.37e-02
+  16  7.180854e+01    5.19e-03    1.70e+01   3.40e+00   6.33e-01  1.79e+05        1    5.69e-04    1.43e-02
+  17  7.180359e+01    4.95e-03    1.64e+01   3.34e+00   6.36e-01  1.83e+05        1    5.53e-04    1.48e-02
+  18  7.179888e+01    4.71e-03    1.57e+01   3.28e+00   6.38e-01  1.87e+05        1    5.51e-04    1.54e-02
+  19  7.179440e+01    4.48e-03    1.51e+01   3.22e+00   6.41e-01  1.91e+05        1    5.52e-04    1.60e-02
+  20  7.179015e+01    4.25e-03    1.45e+01   3.16e+00   6.43e-01  1.95e+05        1    5.49e-04    1.65e-02
+  21  7.178612e+01    4.03e-03    1.40e+01   3.10e+00   6.45e-01  2.00e+05        1    5.51e-04    1.71e-02
+  22  7.178231e+01    3.81e-03    1.34e+01   3.04e+00   6.48e-01  2.06e+05        1    5.51e-04    1.76e-02
+  23  7.177872e+01    3.59e-03    1.28e+01   2.98e+00   6.50e-01  2.11e+05        1    5.51e-04    1.82e-02
+  24  7.177534e+01    3.38e-03    1.23e+01   2.92e+00   6.53e-01  2.17e+05        1    5.51e-04    1.87e-02
+  25  7.177217e+01    3.17e-03    1.17e+01   2.86e+00   6.55e-01  2.24e+05        1    5.50e-04    1.93e-02
+  26  7.176919e+01    2.97e-03    1.12e+01   2.79e+00   6.58e-01  2.31e+05        1    5.52e-04    1.98e-02
+  27  7.176642e+01    2.77e-03    1.07e+01   2.73e+00   6.60e-01  2.39e+05        1    5.50e-04    2.04e-02
+  28  7.176384e+01    2.58e-03    1.01e+01   2.67e+00   6.63e-01  2.48e+05        1    5.50e-04    2.10e-02
+  29  7.176145e+01    2.39e-03    9.64e+00   2.60e+00   6.66e-01  2.57e+05        1    5.51e-04    2.15e-02
+  30  7.175924e+01    2.21e-03    9.13e+00   2.54e+00   6.69e-01  2.67e+05        1    5.51e-04    2.21e-02
+  31  7.175721e+01    2.03e-03    8.64e+00   2.47e+00   6.72e-01  2.79e+05        1    5.50e-04    2.26e-02
+  32  7.175536e+01    1.86e-03    8.15e+00   2.40e+00   6.75e-01  2.91e+05        1    5.50e-04    2.32e-02
+  33  7.175366e+01    1.69e-03    7.67e+00   2.33e+00   6.78e-01  3.05e+05        1    5.51e-04    2.37e-02
+  34  7.175213e+01    1.54e-03    7.20e+00   2.26e+00   6.82e-01  3.20e+05        1    5.51e-04    2.43e-02
+  35  7.175074e+01    1.38e-03    6.73e+00   2.19e+00   6.85e-01  3.37e+05        1    5.51e-04    2.48e-02
+  36  7.174950e+01    1.24e-03    6.27e+00   2.11e+00   6.89e-01  3.57e+05        1    5.49e-04    2.54e-02
+  37  7.174840e+01    1.10e-03    5.82e+00   2.04e+00   6.93e-01  3.79e+05        1    5.51e-04    2.60e-02
+  38  7.174743e+01    9.71e-04    5.38e+00   1.96e+00   6.98e-01  4.04e+05        1    5.50e-04    2.65e-02
+  39  7.174658e+01    8.49e-04    4.94e+00   1.88e+00   7.03e-01  4.32e+05        1    5.52e-04    2.71e-02
+  40  7.174585e+01    7.34e-04    4.52e+00   1.80e+00   7.08e-01  4.66e+05        1    5.49e-04    2.76e-02
+  41  7.174522e+01    6.28e-04    4.10e+00   1.71e+00   7.14e-01  5.06e+05        1    5.50e-04    2.82e-02
+  42  7.174469e+01    5.30e-04    3.69e+00   1.63e+00   7.20e-01  5.53e+05        1    5.51e-04    2.87e-02
+  43  7.174425e+01    4.40e-04    3.29e+00   1.54e+00   7.27e-01  6.10e+05        1    5.49e-04    2.93e-02
+  44  7.174389e+01    3.59e-04    2.90e+00   1.44e+00   7.35e-01  6.81e+05        1    5.82e-04    2.99e-02
+  45  7.174360e+01    2.87e-04    2.53e+00   1.35e+00   7.44e-01  7.70e+05        1    5.56e-04    3.04e-02
+  46  7.174338e+01    2.23e-04    2.16e+00   1.25e+00   7.54e-01  8.87e+05        1    5.53e-04    3.10e-02
+  47  7.174321e+01    1.67e-04    1.98e+00   1.14e+00   7.66e-01  1.04e+06        1    5.48e-04    3.16e-02
+  48  7.174309e+01    1.20e-04    1.47e+00   1.03e+00   7.80e-01  1.27e+06        1    5.49e-04    3.21e-02
+  49  7.174301e+01    8.20e-05    1.15e+00   9.12e-01   7.98e-01  1.61e+06        1    5.50e-04    3.27e-02
+  50  7.174296e+01    5.16e-05    1.97e+00   7.85e-01   8.19e-01  2.17e+06        1    5.48e-04    3.32e-02
+  51  7.174293e+01    2.89e-05    1.83e+00   6.47e-01   8.47e-01  3.27e+06        1    5.48e-04    3.38e-02
+  52  7.174292e+01    1.36e-05    1.86e+00   4.96e-01   8.86e-01  6.03e+06        1    5.49e-04    3.43e-02
+  53  7.174291e+01    4.63e-06    1.68e+00   3.31e-01   9.38e-01  1.81e+07        1    5.50e-04    3.49e-02
+  54  7.174291e+01    8.45e-07    7.71e-01   1.59e-01   1.00e+00  5.43e+07        1    5.49e-04    3.54e-02
+  55  7.174291e+01    4.47e-08    3.48e-02   3.23e-02   1.09e+00  1.63e+08        1    5.49e-04    3.60e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 948
+   Parameters : 718
+   Iterations : 56
+         Time : 0.0360323 [s]
+ Initial cost : 0.286847 [px]
+   Final cost : 0.275097 [px]
+  Termination : Convergence
+
+  => Filtered observations: 0
+  => Filtered images: 0
+
+==============================================================================
+Registering image #8 (3)
+==============================================================================
+
+  => Image sees 155 / 669 points
+
+Pose refinement report
+----------------------
+    Residuals : 308
+   Parameters : 7
+   Iterations : 7
+         Time : 0.0011687 [s]
+ Initial cost : 0.713959 [px]
+   Final cost : 0.449616 [px]
+  Termination : Convergence
+
+  => Continued observations: 154
+  => Added observations: 494
+
+Bundle adjustment report
+------------------------
+    Residuals : 2244
+   Parameters : 1442
+   Iterations : 8
+         Time : 0.0116181 [s]
+ Initial cost : 0.379592 [px]
+   Final cost : 0.354607 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 1
+  => Filtered observations: 11
+  => Changed observations: 0.010695
+
+Bundle adjustment report
+------------------------
+    Residuals : 2224
+   Parameters : 1433
+   Iterations : 2
+         Time : 0.0041687 [s]
+ Initial cost : 0.34312 [px]
+   Final cost : 0.336424 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 6
+  => Filtered observations: 0
+  => Changed observations: 0.005396
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  2.542267e+02    0.00e+00    4.09e+00   0.00e+00   0.00e+00  1.00e+04        0    7.89e-04    1.86e-03
+   1  2.540007e+02    2.26e-01    1.62e+00   1.10e+01   9.94e-01  3.00e+04        1    2.06e-03    3.93e-03
+   2  2.536441e+02    3.57e-01    1.11e+01   2.75e+01   6.80e-01  3.15e+04        1    1.48e-03    5.42e-03
+   3  2.532469e+02    3.97e-01    1.47e+01   2.64e+01   5.99e-01  3.17e+04        1    1.47e-03    6.90e-03
+   4  2.528171e+02    4.30e-01    1.58e+01   2.52e+01   5.86e-01  3.19e+04        1    1.48e-03    8.38e-03
+   5  2.523851e+02    4.32e-01    1.62e+01   2.44e+01   5.77e-01  3.20e+04        1    1.46e-03    9.85e-03
+   6  2.519574e+02    4.28e-01    1.60e+01   2.39e+01   5.78e-01  3.21e+04        1    1.46e-03    1.13e-02
+   7  2.515409e+02    4.17e-01    1.55e+01   2.34e+01   5.83e-01  3.23e+04        1    1.46e-03    1.28e-02
+   8  2.511399e+02    4.01e-01    1.49e+01   2.31e+01   5.91e-01  3.25e+04        1    1.46e-03    1.43e-02
+   9  2.507576e+02    3.82e-01    1.42e+01   2.28e+01   6.00e-01  3.27e+04        1    1.46e-03    1.57e-02
+  10  2.503956e+02    3.62e-01    1.35e+01   2.26e+01   6.10e-01  3.31e+04        1    1.46e-03    1.72e-02
+  11  2.500547e+02    3.41e-01    1.27e+01   2.24e+01   6.19e-01  3.35e+04        1    1.46e-03    1.87e-02
+  12  2.497350e+02    3.20e-01    1.20e+01   2.23e+01   6.28e-01  3.41e+04        1    1.46e-03    2.01e-02
+  13  2.494361e+02    2.99e-01    1.14e+01   2.23e+01   6.36e-01  3.48e+04        1    1.46e-03    2.16e-02
+  14  2.491576e+02    2.79e-01    1.07e+01   2.22e+01   6.43e-01  3.56e+04        1    1.47e-03    2.31e-02
+  15  2.488986e+02    2.59e-01    1.01e+01   2.23e+01   6.50e-01  3.66e+04        1    1.48e-03    2.46e-02
+  16  2.486586e+02    2.40e-01    9.57e+00   2.23e+01   6.57e-01  3.78e+04        1    1.46e-03    2.60e-02
+  17  2.484368e+02    2.22e-01    9.02e+00   2.24e+01   6.62e-01  3.91e+04        1    1.47e-03    2.75e-02
+  18  2.482326e+02    2.04e-01    8.49e+00   2.25e+01   6.68e-01  4.07e+04        1    1.46e-03    2.90e-02
+  19  2.480456e+02    1.87e-01    7.98e+00   2.26e+01   6.73e-01  4.24e+04        1    1.46e-03    3.04e-02
+  20  2.478752e+02    1.70e-01    7.48e+00   2.28e+01   6.79e-01  4.45e+04        1    1.46e-03    3.19e-02
+  21  2.477210e+02    1.54e-01    6.99e+00   2.29e+01   6.84e-01  4.68e+04        1    1.46e-03    3.34e-02
+  22  2.475823e+02    1.39e-01    6.51e+00   2.30e+01   6.89e-01  4.95e+04        1    1.46e-03    3.48e-02
+  23  2.474588e+02    1.24e-01    6.03e+00   2.31e+01   6.95e-01  5.26e+04        1    1.46e-03    3.63e-02
+  24  2.473497e+02    1.09e-01    5.55e+00   2.32e+01   7.01e-01  5.63e+04        1    1.46e-03    3.78e-02
+  25  2.472545e+02    9.52e-02    5.08e+00   2.32e+01   7.07e-01  6.05e+04        1    1.47e-03    3.93e-02
+  26  2.471724e+02    8.21e-02    4.62e+00   2.32e+01   7.14e-01  6.57e+04        1    1.46e-03    4.07e-02
+  27  2.471026e+02    6.97e-02    4.16e+00   2.30e+01   7.21e-01  7.19e+04        1    1.46e-03    4.22e-02
+  28  2.470444e+02    5.82e-02    3.71e+00   2.28e+01   7.29e-01  7.94e+04        1    1.46e-03    4.37e-02
+  29  2.469968e+02    4.76e-02    3.26e+00   2.24e+01   7.37e-01  8.89e+04        1    1.46e-03    4.51e-02
+  30  2.469588e+02    3.80e-02    2.83e+00   2.19e+01   7.47e-01  1.01e+05        1    1.46e-03    4.66e-02
+  31  2.469294e+02    2.94e-02    2.41e+00   2.12e+01   7.58e-01  1.17e+05        1    1.46e-03    4.81e-02
+  32  2.469074e+02    2.19e-02    2.00e+00   2.01e+01   7.71e-01  1.40e+05        1    1.46e-03    4.95e-02
+  33  2.468919e+02    1.56e-02    1.60e+00   1.88e+01   7.87e-01  1.72e+05        1    1.46e-03    5.10e-02
+  34  2.468815e+02    1.03e-02    1.37e+00   1.72e+01   8.06e-01  2.23e+05        1    1.46e-03    5.25e-02
+  35  2.468752e+02    6.27e-03    8.91e-01   1.51e+01   8.30e-01  3.14e+05        1    1.52e-03    5.40e-02
+  36  2.468719e+02    3.30e-03    1.07e+00   1.25e+01   8.62e-01  5.07e+05        1    1.50e-03    5.55e-02
+  37  2.468706e+02    1.38e-03    1.97e+00   9.31e+00   9.05e-01  1.09e+06        1    1.47e-03    5.70e-02
+  38  2.468702e+02    3.75e-04    2.00e+00   5.65e+00   9.61e-01  3.26e+06        1    1.46e-03    5.85e-02
+  39  2.468701e+02    4.14e-05    8.73e-01   2.00e+00   1.01e+00  9.78e+06        1    1.46e-03    5.99e-02
+  40  2.468701e+02    8.57e-07    4.63e-02   2.89e-01   1.06e+00  2.93e+07        1    1.46e-03    6.14e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 2236
+   Parameters : 1442
+   Iterations : 41
+         Time : 0.0614338 [s]
+ Initial cost : 0.33719 [px]
+   Final cost : 0.332276 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 1
+  => Changed observations: 0.000894
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  2.466005e+02    0.00e+00    6.72e-01   0.00e+00   0.00e+00  1.00e+04        0    7.71e-04    1.82e-03
+   1  2.465460e+02    5.45e-02    1.13e+00   1.85e+00   1.00e+00  3.00e+04        1    2.06e-03    3.89e-03
+   2  2.465415e+02    4.47e-03    1.27e+00   1.58e+00   1.05e+00  9.00e+04        1    1.51e-03    5.40e-03
+   3  2.465373e+02    4.25e-03    2.00e+00   3.31e+00   9.27e-01  2.40e+05        1    1.48e-03    6.89e-03
+   4  2.465339e+02    3.37e-03    1.98e+00   6.18e+00   6.85e-01  2.53e+05        1    1.47e-03    8.37e-03
+   5  2.465307e+02    3.17e-03    2.00e+00   4.25e+00   9.34e-01  7.28e+05        1    1.47e-03    9.84e-03
+   6  2.465298e+02    9.83e-04    8.86e-01   4.56e+00   7.92e-01  9.10e+05        1    1.47e-03    1.13e-02
+   7  2.465294e+02    4.12e-04    9.97e-01   1.83e+00   9.91e-01  2.73e+06        1    1.47e-03    1.28e-02
+   8  2.465293e+02    2.51e-05    6.15e-01   7.73e-01   1.01e+00  8.19e+06        1    1.47e-03    1.43e-02
+   9  2.465293e+02    7.72e-07    3.46e-02   1.31e-01   1.05e+00  2.46e+07        1    1.47e-03    1.57e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 2232
+   Parameters : 1439
+   Iterations : 10
+         Time : 0.0157763 [s]
+ Initial cost : 0.332391 [px]
+   Final cost : 0.332344 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #6 (4)
+==============================================================================
+
+  => Image sees 237 / 700 points
+
+Pose refinement report
+----------------------
+    Residuals : 468
+   Parameters : 7
+   Iterations : 8
+         Time : 0.0019125 [s]
+ Initial cost : 0.609728 [px]
+   Final cost : 0.536066 [px]
+  Termination : Convergence
+
+  => Continued observations: 234
+  => Added observations: 297
+
+Bundle adjustment report
+------------------------
+    Residuals : 3294
+   Parameters : 1881
+   Iterations : 2
+         Time : 0.0073968 [s]
+ Initial cost : 0.4015 [px]
+   Final cost : 0.35147 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 5
+  => Filtered observations: 8
+  => Changed observations: 0.007893
+
+Bundle adjustment report
+------------------------
+    Residuals : 3288
+   Parameters : 1881
+   Iterations : 2
+         Time : 0.0071496 [s]
+ Initial cost : 0.395074 [px]
+   Final cost : 0.378188 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 0
+  => Filtered observations: 2
+  => Changed observations: 0.001217
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  4.549025e+02    0.00e+00    1.92e+01   0.00e+00   0.00e+00  1.00e+04        0    1.23e-03    2.91e-03
+   1  4.540712e+02    8.31e-01    1.75e+00   7.40e+00   1.04e+00  3.00e+04        1    3.04e-03    5.96e-03
+   2  4.539285e+02    1.43e-01    1.88e+00   9.85e+00   1.07e+00  9.00e+04        1    2.45e-03    8.42e-03
+   3  4.538746e+02    5.39e-02    3.34e+00   9.49e+00   7.64e-01  1.06e+05        1    2.41e-03    1.08e-02
+   4  4.538369e+02    3.76e-02    1.60e+00   7.11e+00   9.04e-01  2.23e+05        1    2.39e-03    1.32e-02
+   5  4.538250e+02    1.19e-02    2.08e+00   1.07e+01   5.95e-01  2.25e+05        1    2.39e-03    1.56e-02
+   6  4.538118e+02    1.32e-02    9.09e-01   7.35e+00   9.19e-01  5.48e+05        1    2.39e-03    1.80e-02
+   7  4.538082e+02    3.55e-03    1.96e+00   7.92e+00   7.33e-01  6.10e+05        1    2.43e-03    2.05e-02
+   8  4.538063e+02    1.98e-03    7.59e-01   3.64e+00   9.78e-01  1.83e+06        1    2.40e-03    2.29e-02
+   9  4.538061e+02    1.95e-04    1.55e+00   2.07e+00   9.87e-01  5.49e+06        1    2.39e-03    2.53e-02
+  10  4.538061e+02    1.22e-05    3.61e-01   4.68e-01   1.03e+00  1.65e+07        1    2.39e-03    2.77e-02
+  11  4.538061e+02    1.65e-07    1.12e-02   5.33e-02   1.15e+00  4.94e+07        1    2.39e-03    3.01e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 3284
+   Parameters : 1878
+   Iterations : 12
+         Time : 0.0301236 [s]
+ Initial cost : 0.372184 [px]
+   Final cost : 0.371735 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #7 (5)
+==============================================================================
+
+  => Image sees 242 / 461 points
+
+Pose refinement report
+----------------------
+    Residuals : 478
+   Parameters : 7
+   Iterations : 8
+         Time : 0.0017064 [s]
+ Initial cost : 0.621168 [px]
+   Final cost : 0.543468 [px]
+  Termination : Convergence
+
+  => Continued observations: 238
+  => Added observations: 183
+
+Bundle adjustment report
+------------------------
+    Residuals : 4126
+   Parameters : 2143
+   Iterations : 3
+         Time : 0.0113101 [s]
+ Initial cost : 0.414923 [px]
+   Final cost : 0.383211 [px]
+  Termination : Convergence
+
+  => Merged observations: 10
+  => Completed observations: 8
+  => Filtered observations: 20
+  => Changed observations: 0.018420
+
+Bundle adjustment report
+------------------------
+    Residuals : 4102
+   Parameters : 2134
+   Iterations : 2
+         Time : 0.0079755 [s]
+ Initial cost : 0.424155 [px]
+   Final cost : 0.406486 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 3
+  => Filtered observations: 0
+  => Changed observations: 0.001463
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 1
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  6.916478e+02    0.00e+00    1.51e+01   0.00e+00   0.00e+00  1.00e+04        0    1.60e-03    3.84e-03
+   1  6.886080e+02    3.04e+00    1.80e+00   6.16e+00   1.00e+00  3.00e+04        1    3.92e-03    7.77e-03
+   2  6.885777e+02    3.04e-02    1.94e+00   5.63e+00   1.01e+00  9.00e+04        1    3.17e-03    1.10e-02
+   3  6.885679e+02    9.82e-03    1.99e+00   4.77e+00   1.04e+00  2.70e+05        1    3.18e-03    1.41e-02
+   4  6.885664e+02    1.45e-03    1.01e+00   2.83e+00   1.11e+00  8.10e+05        1    3.20e-03    1.73e-02
+   5  6.885661e+02    2.86e-04    1.91e+00   2.18e+00   1.08e+00  2.43e+06        1    3.18e-03    2.05e-02
+   6  6.885661e+02    4.89e-05    1.58e+00   1.11e+00   1.08e+00  7.29e+06        1    3.17e-03    2.37e-02
+   7  6.885661e+02    3.15e-06    1.90e-01   2.66e-01   1.13e+00  2.19e+07        1    3.17e-03    2.69e-02
+   8  6.885661e+02    1.32e-07    1.18e-02   4.04e-02   1.23e+00  6.56e+07        1    3.17e-03    3.01e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 4110
+   Parameters : 2137
+   Iterations : 9
+         Time : 0.0301112 [s]
+ Initial cost : 0.410225 [px]
+   Final cost : 0.40931 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #5 (6)
+==============================================================================
+
+  => Image sees 251 / 442 points
+
+Pose refinement report
+----------------------
+    Residuals : 494
+   Parameters : 7
+   Iterations : 9
+         Time : 0.0019651 [s]
+ Initial cost : 0.685454 [px]
+   Final cost : 0.494285 [px]
+  Termination : Convergence
+
+  => Continued observations: 246
+  => Added observations: 144
+
+Bundle adjustment report
+------------------------
+    Residuals : 4890
+   Parameters : 2345
+   Iterations : 3
+         Time : 0.0139824 [s]
+ Initial cost : 0.400406 [px]
+   Final cost : 0.384523 [px]
+  Termination : Convergence
+
+  => Merged observations: 10
+  => Completed observations: 9
+  => Filtered observations: 22
+  => Changed observations: 0.016769
+
+Bundle adjustment report
+------------------------
+    Residuals : 4864
+   Parameters : 2333
+   Iterations : 2
+         Time : 0.0098516 [s]
+ Initial cost : 0.432294 [px]
+   Final cost : 0.420447 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 3
+  => Filtered observations: 1
+  => Changed observations: 0.001645
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  8.625340e+02    0.00e+00    2.03e+01   0.00e+00   0.00e+00  1.00e+04        0    1.97e-03    4.52e-03
+   1  8.622385e+02    2.95e-01    1.86e+00   5.60e+00   1.00e+00  3.00e+04        1    5.16e-03    9.69e-03
+   2  8.620742e+02    1.64e-01    9.48e-01   8.66e+00   1.01e+00  9.00e+04        1    3.95e-03    1.36e-02
+   3  8.620081e+02    6.60e-02    1.86e+00   7.26e+00   1.01e+00  2.70e+05        1    3.95e-03    1.76e-02
+   4  8.619965e+02    1.16e-02    1.79e+00   3.85e+00   9.58e-01  8.10e+05        1    3.96e-03    2.16e-02
+   5  8.619936e+02    2.90e-03    9.02e-01   3.19e+00   9.08e-01  1.77e+06        1    3.96e-03    2.55e-02
+   6  8.619930e+02    5.94e-04    1.99e+00   1.41e+00   9.95e-01  5.32e+06        1    3.95e-03    2.95e-02
+   7  8.619930e+02    2.27e-05    6.89e-01   3.59e-01   1.02e+00  1.59e+07        1    3.95e-03    3.35e-02
+   8  8.619930e+02    2.40e-07    5.92e-02   4.22e-02   1.07e+00  4.78e+07        1    3.97e-03    3.74e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 4866
+   Parameters : 2333
+   Iterations : 9
+         Time : 0.0374967 [s]
+ Initial cost : 0.421019 [px]
+   Final cost : 0.420887 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #3 (7)
+==============================================================================
+
+  => Image sees 246 / 420 points
+
+Pose refinement report
+----------------------
+    Residuals : 492
+   Parameters : 7
+   Iterations : 10
+         Time : 0.0021661 [s]
+ Initial cost : 0.776449 [px]
+   Final cost : 0.580651 [px]
+  Termination : Convergence
+
+  => Continued observations: 239
+  => Added observations: 145
+
+Bundle adjustment report
+------------------------
+    Residuals : 5044
+   Parameters : 1649
+   Iterations : 3
+         Time : 0.0124498 [s]
+ Initial cost : 0.442521 [px]
+   Final cost : 0.416725 [px]
+  Termination : Convergence
+
+  => Merged observations: 13
+  => Completed observations: 11
+  => Filtered observations: 28
+  => Changed observations: 0.020619
+
+Bundle adjustment report
+------------------------
+    Residuals : 5008
+   Parameters : 1634
+   Iterations : 2
+         Time : 0.0084893 [s]
+ Initial cost : 0.46388 [px]
+   Final cost : 0.451376 [px]
+  Termination : Convergence
+
+  => Merged observations: 15
+  => Completed observations: 7
+  => Filtered observations: 0
+  => Changed observations: 0.008786
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  1.120572e+03    0.00e+00    1.98e+01   0.00e+00   0.00e+00  1.00e+04        0    2.25e-03    5.20e-03
+   1  1.119064e+03    1.51e+00    2.02e+00   7.92e+00   1.01e+00  3.00e+04        1    6.10e-03    1.13e-02
+   2  1.118752e+03    3.12e-01    1.72e+00   1.14e+01   1.02e+00  9.00e+04        1    4.77e-03    1.61e-02
+   3  1.118638e+03    1.14e-01    2.00e+00   9.22e+00   1.04e+00  2.70e+05        1    4.76e-03    2.09e-02
+   4  1.118624e+03    1.37e-02    1.70e+00   3.64e+00   1.10e+00  8.10e+05        1    4.79e-03    2.57e-02
+   5  1.118623e+03    1.27e-03    1.32e+00   1.92e+00   1.12e+00  2.43e+06        1    4.75e-03    3.04e-02
+   6  1.118623e+03    1.49e-04    1.99e+00   9.73e-01   1.09e+00  7.29e+06        1    4.75e-03    3.52e-02
+   7  1.118623e+03    9.44e-06    3.78e-01   2.26e-01   1.12e+00  2.19e+07        1    4.79e-03    4.00e-02
+   8  1.118623e+03    3.33e-07    1.95e-02   3.14e-02   1.20e+00  6.56e+07        1    4.91e-03    4.49e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 5610
+   Parameters : 2523
+   Iterations : 9
+         Time : 0.0450545 [s]
+ Initial cost : 0.446929 [px]
+   Final cost : 0.44654 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #20 (8)
+==============================================================================
+
+  => Image sees 261 / 694 points
+
+Pose refinement report
+----------------------
+    Residuals : 518
+   Parameters : 7
+   Iterations : 10
+         Time : 0.0022967 [s]
+ Initial cost : 0.736687 [px]
+   Final cost : 0.529337 [px]
+  Termination : Convergence
+
+  => Continued observations: 255
+  => Added observations: 143
+
+Bundle adjustment report
+------------------------
+    Residuals : 5528
+   Parameters : 1811
+   Iterations : 3
+         Time : 0.0132496 [s]
+ Initial cost : 0.428862 [px]
+   Final cost : 0.400517 [px]
+  Termination : Convergence
+
+  => Merged observations: 5
+  => Completed observations: 12
+  => Filtered observations: 19
+  => Changed observations: 0.013025
+
+Bundle adjustment report
+------------------------
+    Residuals : 5514
+   Parameters : 1802
+   Iterations : 2
+         Time : 0.0091144 [s]
+ Initial cost : 0.462345 [px]
+   Final cost : 0.452462 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 1
+  => Filtered observations: 0
+  => Changed observations: 0.000363
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 1
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  1.324065e+03    0.00e+00    5.44e+01   0.00e+00   0.00e+00  1.00e+04        0    2.58e-03    5.95e-03
+   1  1.313285e+03    1.08e+01    9.30e+00   1.21e+01   1.00e+00  3.00e+04        1    6.91e-03    1.29e-02
+   2  1.312964e+03    3.20e-01    2.43e+00   9.82e+00   1.00e+00  9.00e+04        1    5.60e-03    1.85e-02
+   3  1.312839e+03    1.25e-01    4.48e+00   9.66e+00   1.01e+00  2.70e+05        1    5.61e-03    2.41e-02
+   4  1.312800e+03    3.82e-02    7.84e+00   1.27e+01   4.81e-01  2.70e+05        1    5.61e-03    2.97e-02
+   5  1.312740e+03    6.09e-02    2.80e+00   6.88e+00   9.28e-01  7.20e+05        1    5.88e-03    3.56e-02
+   6  1.312728e+03    1.16e-02    1.99e+00   5.67e+00   8.29e-01  1.01e+06        1    5.91e-03    4.15e-02
+   7  1.312724e+03    3.64e-03    1.42e+00   2.02e+00   1.00e+00  3.02e+06        1    5.74e-03    4.73e-02
+   8  1.312724e+03    1.29e-04    1.96e+00   6.53e-01   1.04e+00  9.06e+06        1    6.62e-03    5.39e-02
+   9  1.312724e+03    2.78e-06    1.29e-01   9.73e-02   1.09e+00  2.72e+07        1    5.68e-03    5.96e-02
+  10  1.312724e+03    5.43e-08    7.90e-03   1.09e-02   1.17e+00  8.16e+07        1    5.63e-03    6.53e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 6396
+   Parameters : 2731
+   Iterations : 11
+         Time : 0.0653491 [s]
+ Initial cost : 0.454989 [px]
+   Final cost : 0.453036 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #21 (9)
+==============================================================================
+
+  => Image sees 271 / 556 points
+
+Pose refinement report
+----------------------
+    Residuals : 532
+   Parameters : 7
+   Iterations : 9
+         Time : 0.0021293 [s]
+ Initial cost : 0.713995 [px]
+   Final cost : 0.490837 [px]
+  Termination : Convergence
+
+  => Continued observations: 262
+  => Added observations: 225
+
+Bundle adjustment report
+------------------------
+    Residuals : 6022
+   Parameters : 1868
+   Iterations : 3
+         Time : 0.0140576 [s]
+ Initial cost : 0.415413 [px]
+   Final cost : 0.398514 [px]
+  Termination : Convergence
+
+  => Merged observations: 9
+  => Completed observations: 14
+  => Filtered observations: 21
+  => Changed observations: 0.014613
+
+Bundle adjustment report
+------------------------
+    Residuals : 6008
+   Parameters : 1856
+   Iterations : 2
+         Time : 0.0095722 [s]
+ Initial cost : 0.458614 [px]
+   Final cost : 0.44817 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 2
+  => Filtered observations: 0
+  => Changed observations: 0.000666
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 1
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  1.509227e+03    0.00e+00    3.38e+01   0.00e+00   0.00e+00  1.00e+04        0    3.14e-03    7.10e-03
+   1  1.506900e+03    2.33e+00    1.67e+00   3.45e+00   9.99e-01  3.00e+04        1    8.18e-03    1.53e-02
+   2  1.506881e+03    1.81e-02    1.98e+00   1.93e+00   1.02e+00  9.00e+04        1    6.79e-03    2.21e-02
+   3  1.506878e+03    3.10e-03    2.00e+00   1.34e+00   1.03e+00  2.70e+05        1    6.69e-03    2.88e-02
+   4  1.506877e+03    1.01e-03    1.99e+00   1.35e+00   1.02e+00  8.10e+05        1    6.73e-03    3.55e-02
+   5  1.506877e+03    3.46e-04    1.79e+00   1.12e+00   1.02e+00  2.43e+06        1    6.72e-03    4.23e-02
+   6  1.506877e+03    3.77e-05    8.56e-01   4.10e-01   1.04e+00  7.29e+06        1    6.70e-03    4.90e-02
+   7  1.506877e+03    1.02e-06    7.35e-02   6.69e-02   1.08e+00  2.19e+07        1    6.71e-03    5.57e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 7362
+   Parameters : 3050
+   Iterations : 8
+         Time : 0.0557902 [s]
+ Initial cost : 0.452772 [px]
+   Final cost : 0.452419 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #17 (10)
+==============================================================================
+
+  => Image sees 291 / 466 points
+
+Pose refinement report
+----------------------
+    Residuals : 594
+   Parameters : 7
+   Iterations : 10
+         Time : 0.002505 [s]
+ Initial cost : 0.711837 [px]
+   Final cost : 0.521053 [px]
+  Termination : Convergence
+
+  => Continued observations: 286
+  => Added observations: 103
+
+Bundle adjustment report
+------------------------
+    Residuals : 6338
+   Parameters : 1472
+   Iterations : 3
+         Time : 0.0135687 [s]
+ Initial cost : 0.428685 [px]
+   Final cost : 0.413999 [px]
+  Termination : Convergence
+
+  => Merged observations: 58
+  => Completed observations: 17
+  => Filtered observations: 26
+  => Changed observations: 0.031871
+
+Bundle adjustment report
+------------------------
+    Residuals : 6330
+   Parameters : 1460
+   Iterations : 2
+         Time : 0.0090096 [s]
+ Initial cost : 0.477405 [px]
+   Final cost : 0.465928 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 6
+  => Filtered observations: 0
+  => Changed observations: 0.001896
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  1.787547e+03    0.00e+00    5.43e+01   0.00e+00   0.00e+00  1.00e+04        0    3.44e-03    7.94e-03
+   1  1.781436e+03    6.11e+00    2.00e+00   2.65e+00   1.00e+00  3.00e+04        1    9.46e-03    1.74e-02
+   2  1.781414e+03    2.28e-02    1.77e+00   1.95e+00   1.01e+00  9.00e+04        1    7.67e-03    2.51e-02
+   3  1.781399e+03    1.45e-02    1.98e+00   2.66e+00   9.81e-01  2.70e+05        1    7.65e-03    3.28e-02
+   4  1.781389e+03    1.02e-02    1.96e+00   3.26e+00   9.65e-01  8.10e+05        1    7.70e-03    4.05e-02
+   5  1.781386e+03    2.74e-03    1.99e+00   2.00e+00   9.98e-01  2.43e+06        1    7.71e-03    4.82e-02
+   6  1.781386e+03    1.85e-04    1.78e+00   5.02e-01   1.04e+00  7.29e+06        1    8.04e-03    5.62e-02
+   7  1.781386e+03    2.96e-06    5.72e-02   5.94e-02   1.11e+00  2.19e+07        1    8.05e-03    6.43e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 8134
+   Parameters : 3171
+   Iterations : 8
+         Time : 0.064414 [s]
+ Initial cost : 0.468788 [px]
+   Final cost : 0.46798 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #19 (11)
+==============================================================================
+
+  => Image sees 286 / 506 points
+
+Pose refinement report
+----------------------
+    Residuals : 582
+   Parameters : 7
+   Iterations : 8
+         Time : 0.0019917 [s]
+ Initial cost : 0.667666 [px]
+   Final cost : 0.487742 [px]
+  Termination : Convergence
+
+  => Continued observations: 283
+  => Added observations: 155
+
+Bundle adjustment report
+------------------------
+    Residuals : 6144
+   Parameters : 1349
+   Iterations : 3
+         Time : 0.0138083 [s]
+ Initial cost : 0.425039 [px]
+   Final cost : 0.409482 [px]
+  Termination : Convergence
+
+  => Merged observations: 40
+  => Completed observations: 10
+  => Filtered observations: 19
+  => Changed observations: 0.022461
+
+Bundle adjustment report
+------------------------
+    Residuals : 6132
+   Parameters : 1340
+   Iterations : 2
+         Time : 0.0085251 [s]
+ Initial cost : 0.487859 [px]
+   Final cost : 0.476215 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 3
+  => Filtered observations: 1
+  => Changed observations: 0.001305
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 2
+  => Merged observations: 8
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  2.039396e+03    0.00e+00    5.39e+01   0.00e+00   0.00e+00  1.00e+04        0    3.75e-03    8.80e-03
+   1  2.031264e+03    8.13e+00    1.99e+00   2.66e+00   1.00e+00  3.00e+04        1    1.12e-02    2.00e-02
+   2  2.031221e+03    4.24e-02    1.63e+00   2.18e+00   1.04e+00  9.00e+04        1    8.69e-03    2.87e-02
+   3  2.031187e+03    3.44e-02    1.97e+00   3.97e+00   9.77e-01  2.70e+05        1    9.10e-03    3.78e-02
+   4  2.031161e+03    2.56e-02    2.03e+00   5.05e+00   9.38e-01  8.10e+05        1    9.06e-03    4.69e-02
+   5  2.031153e+03    8.07e-03    1.95e+00   3.13e+00   9.87e-01  2.43e+06        1    8.88e-03    5.58e-02
+   6  2.031152e+03    6.61e-04    1.98e+00   8.15e-01   1.03e+00  7.29e+06        1    8.75e-03    6.46e-02
+   7  2.031152e+03    9.81e-06    1.32e-01   1.05e-01   1.10e+00  2.19e+07        1    8.67e-03    7.33e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 9000
+   Parameters : 3370
+   Iterations : 8
+         Time : 0.07336 [s]
+ Initial cost : 0.476025 [px]
+   Final cost : 0.475062 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #28 (12)
+==============================================================================
+
+  => Image sees 325 / 575 points
+
+Pose refinement report
+----------------------
+    Residuals : 664
+   Parameters : 7
+   Iterations : 9
+         Time : 0.0025626 [s]
+ Initial cost : 0.775085 [px]
+   Final cost : 0.520108 [px]
+  Termination : Convergence
+
+  => Continued observations: 316
+  => Added observations: 161
+
+Bundle adjustment report
+------------------------
+    Residuals : 7078
+   Parameters : 1433
+   Iterations : 4
+         Time : 0.0217872 [s]
+ Initial cost : 0.437762 [px]
+   Final cost : 0.417703 [px]
+  Termination : Convergence
+
+  => Merged observations: 59
+  => Completed observations: 12
+  => Filtered observations: 26
+  => Changed observations: 0.027409
+
+Bundle adjustment report
+------------------------
+    Residuals : 7068
+   Parameters : 1418
+   Iterations : 2
+         Time : 0.0093484 [s]
+ Initial cost : 0.490544 [px]
+   Final cost : 0.483149 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 7
+  => Filtered observations: 1
+  => Changed observations: 0.002264
+
+==============================================================================
+Registering image #1 (13)
+==============================================================================
+
+  => Image sees 245 / 437 points
+
+Pose refinement report
+----------------------
+    Residuals : 494
+   Parameters : 7
+   Iterations : 9
+         Time : 0.001945 [s]
+ Initial cost : 0.767632 [px]
+   Final cost : 0.55202 [px]
+  Termination : Convergence
+
+  => Continued observations: 237
+  => Added observations: 102
+
+Bundle adjustment report
+------------------------
+    Residuals : 6364
+   Parameters : 1184
+   Iterations : 4
+         Time : 0.0158609 [s]
+ Initial cost : 0.454398 [px]
+   Final cost : 0.435702 [px]
+  Termination : Convergence
+
+  => Merged observations: 42
+  => Completed observations: 10
+  => Filtered observations: 17
+  => Changed observations: 0.021684
+
+Bundle adjustment report
+------------------------
+    Residuals : 6356
+   Parameters : 1181
+   Iterations : 2
+         Time : 0.0080573 [s]
+ Initial cost : 0.520541 [px]
+   Final cost : 0.513864 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 0
+  => Filtered observations: 1
+  => Changed observations: 0.000315
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 2
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  2.616155e+03    0.00e+00    7.58e+01   0.00e+00   0.00e+00  1.00e+04        0    4.44e-03    1.00e-02
+   1  2.603151e+03    1.30e+01    1.92e+00   3.22e+00   1.00e+00  3.00e+04        1    1.31e-02    2.32e-02
+   2  2.603118e+03    3.25e-02    1.98e+00   1.82e+00   1.02e+00  9.00e+04        1    1.07e-02    3.39e-02
+   3  2.603113e+03    4.59e-03    1.97e+00   1.34e+00   1.01e+00  2.70e+05        1    1.08e-02    4.47e-02
+   4  2.603112e+03    1.57e-03    1.80e+00   1.22e+00   9.98e-01  8.10e+05        1    1.08e-02    5.55e-02
+   5  2.603112e+03    2.97e-04    1.98e+00   6.67e-01   1.01e+00  2.43e+06        1    1.07e-02    6.62e-02
+   6  2.603112e+03    1.36e-05    2.00e-01   1.49e-01   1.05e+00  7.29e+06        1    1.09e-02    7.71e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 10604
+   Parameters : 3702
+   Iterations : 7
+         Time : 0.0772346 [s]
+ Initial cost : 0.496703 [px]
+   Final cost : 0.495463 [px]
+  Termination : Convergence
+
+  => Completed observations: 1
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000189
+  => Filtered images: 0
+
+==============================================================================
+Registering image #12 (14)
+==============================================================================
+
+  => Image sees 275 / 471 points
+
+Pose refinement report
+----------------------
+    Residuals : 548
+   Parameters : 7
+   Iterations : 8
+         Time : 0.0019507 [s]
+ Initial cost : 0.742502 [px]
+   Final cost : 0.545569 [px]
+  Termination : Convergence
+
+  => Continued observations: 267
+  => Added observations: 127
+
+Bundle adjustment report
+------------------------
+    Residuals : 7310
+   Parameters : 1319
+   Iterations : 4
+         Time : 0.0173467 [s]
+ Initial cost : 0.459647 [px]
+   Final cost : 0.443491 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 14
+  => Filtered observations: 26
+  => Changed observations: 0.010944
+
+Bundle adjustment report
+------------------------
+    Residuals : 7286
+   Parameters : 1307
+   Iterations : 2
+         Time : 0.0089477 [s]
+ Initial cost : 0.523486 [px]
+   Final cost : 0.516457 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 2
+  => Filtered observations: 0
+  => Changed observations: 0.000549
+
+==============================================================================
+Registering image #10 (15)
+==============================================================================
+
+  => Image sees 263 / 367 points
+
+Pose refinement report
+----------------------
+    Residuals : 550
+   Parameters : 7
+   Iterations : 13
+         Time : 0.0030161 [s]
+ Initial cost : 0.75983 [px]
+   Final cost : 0.625819 [px]
+  Termination : Convergence
+
+  => Continued observations: 253
+  => Added observations: 103
+
+Bundle adjustment report
+------------------------
+    Residuals : 6690
+   Parameters : 1124
+   Iterations : 4
+         Time : 0.0157767 [s]
+ Initial cost : 0.512102 [px]
+   Final cost : 0.496353 [px]
+  Termination : Convergence
+
+  => Merged observations: 38
+  => Completed observations: 10
+  => Filtered observations: 41
+  => Changed observations: 0.026607
+
+Bundle adjustment report
+------------------------
+    Residuals : 6644
+   Parameters : 1109
+   Iterations : 2
+         Time : 0.0078479 [s]
+ Initial cost : 0.584311 [px]
+   Final cost : 0.569104 [px]
+  Termination : Convergence
+
+  => Merged observations: 15
+  => Completed observations: 8
+  => Filtered observations: 0
+  => Changed observations: 0.006924
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 4
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  3.341214e+03    0.00e+00    2.01e+02   0.00e+00   0.00e+00  1.00e+04        0    5.04e-03    1.12e-02
+   1  3.323950e+03    1.73e+01    2.55e+00   5.40e+00   1.00e+00  3.00e+04        1    1.53e-02    2.65e-02
+   2  3.323822e+03    1.28e-01    1.98e+00   4.45e+00   1.02e+00  9.00e+04        1    1.28e-02    3.94e-02
+   3  3.323784e+03    3.83e-02    1.97e+00   3.74e+00   9.77e-01  2.70e+05        1    1.27e-02    5.21e-02
+   4  3.323766e+03    1.78e-02    1.92e+00   3.55e+00   9.80e-01  8.10e+05        1    1.27e-02    6.48e-02
+   5  3.323763e+03    3.43e-03    2.00e+00   1.85e+00   1.01e+00  2.43e+06        1    1.27e-02    7.75e-02
+   6  3.323763e+03    1.53e-04    8.67e-01   3.97e-01   1.05e+00  7.29e+06        1    1.27e-02    9.01e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 12048
+   Parameters : 3986
+   Iterations : 7
+         Time : 0.0902602 [s]
+ Initial cost : 0.526617 [px]
+   Final cost : 0.52524 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #24 (16)
+==============================================================================
+
+  => Image sees 263 / 455 points
+
+Pose refinement report
+----------------------
+    Residuals : 524
+   Parameters : 7
+   Iterations : 8
+         Time : 0.0018851 [s]
+ Initial cost : 0.783631 [px]
+   Final cost : 0.582519 [px]
+  Termination : Convergence
+
+  => Continued observations: 248
+  => Added observations: 92
+
+Bundle adjustment report
+------------------------
+    Residuals : 7094
+   Parameters : 1022
+   Iterations : 4
+         Time : 0.0158161 [s]
+ Initial cost : 0.47722 [px]
+   Final cost : 0.456382 [px]
+  Termination : Convergence
+
+  => Merged observations: 38
+  => Completed observations: 11
+  => Filtered observations: 33
+  => Changed observations: 0.023118
+
+Bundle adjustment report
+------------------------
+    Residuals : 7042
+   Parameters : 1004
+   Iterations : 2
+         Time : 0.0077686 [s]
+ Initial cost : 0.539662 [px]
+   Final cost : 0.528646 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 2
+  => Filtered observations: 0
+  => Changed observations: 0.000568
+
+==============================================================================
+Registering image #27 (17)
+==============================================================================
+
+  => Image sees 259 / 442 points
+
+Pose refinement report
+----------------------
+    Residuals : 526
+   Parameters : 7
+   Iterations : 10
+         Time : 0.0023274 [s]
+ Initial cost : 0.835655 [px]
+   Final cost : 0.548292 [px]
+  Termination : Convergence
+
+  => Continued observations: 249
+  => Added observations: 137
+
+Bundle adjustment report
+------------------------
+    Residuals : 6876
+   Parameters : 1007
+   Iterations : 4
+         Time : 0.0151803 [s]
+ Initial cost : 0.464198 [px]
+   Final cost : 0.454325 [px]
+  Termination : Convergence
+
+  => Merged observations: 56
+  => Completed observations: 10
+  => Filtered observations: 25
+  => Changed observations: 0.026469
+
+Bundle adjustment report
+------------------------
+    Residuals : 6986
+   Parameters : 1028
+   Iterations : 2
+         Time : 0.0078204 [s]
+ Initial cost : 0.549142 [px]
+   Final cost : 0.542477 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 3
+  => Filtered observations: 1
+  => Changed observations: 0.001145
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 3
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  3.902732e+03    0.00e+00    2.05e+02   0.00e+00   0.00e+00  1.00e+04        0    5.66e-03    1.24e-02
+   1  3.882031e+03    2.07e+01    2.90e+00   3.85e+00   1.00e+00  3.00e+04        1    1.72e-02    2.97e-02
+   2  3.881971e+03    6.02e-02    2.00e+00   2.44e+00   1.05e+00  9.00e+04        1    1.48e-02    4.45e-02
+   3  3.881966e+03    5.24e-03    2.00e+00   1.12e+00   1.04e+00  2.70e+05        1    1.48e-02    5.93e-02
+   4  3.881966e+03    2.17e-04    7.33e-01   2.71e-01   1.05e+00  8.10e+05        1    1.48e-02    7.41e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 13440
+   Parameters : 4270
+   Iterations : 5
+         Time : 0.0742325 [s]
+ Initial cost : 0.538871 [px]
+   Final cost : 0.537435 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #14 (18)
+==============================================================================
+
+  => Image sees 261 / 410 points
+
+Pose refinement report
+----------------------
+    Residuals : 560
+   Parameters : 7
+   Iterations : 12
+         Time : 0.00294 [s]
+ Initial cost : 0.841701 [px]
+   Final cost : 0.587952 [px]
+  Termination : Convergence
+
+  => Continued observations: 254
+  => Added observations: 128
+
+Bundle adjustment report
+------------------------
+    Residuals : 6160
+   Parameters : 1004
+   Iterations : 5
+         Time : 0.0170842 [s]
+ Initial cost : 0.499767 [px]
+   Final cost : 0.486891 [px]
+  Termination : Convergence
+
+  => Merged observations: 102
+  => Completed observations: 12
+  => Filtered observations: 36
+  => Changed observations: 0.048701
+
+Bundle adjustment report
+------------------------
+    Residuals : 6126
+   Parameters : 980
+   Iterations : 2
+         Time : 0.0067421 [s]
+ Initial cost : 0.575563 [px]
+   Final cost : 0.566546 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 8
+  => Filtered observations: 1
+  => Changed observations: 0.002938
+
+==============================================================================
+Registering image #25 (19)
+==============================================================================
+
+  => Image sees 266 / 416 points
+
+Pose refinement report
+----------------------
+    Residuals : 560
+   Parameters : 7
+   Iterations : 11
+         Time : 0.0026796 [s]
+ Initial cost : 0.80823 [px]
+   Final cost : 0.592192 [px]
+  Termination : Convergence
+
+  => Continued observations: 252
+  => Added observations: 126
+
+Bundle adjustment report
+------------------------
+    Residuals : 5726
+   Parameters : 1001
+   Iterations : 5
+         Time : 0.0159698 [s]
+ Initial cost : 0.52139 [px]
+   Final cost : 0.507088 [px]
+  Termination : Convergence
+
+  => Merged observations: 37
+  => Completed observations: 21
+  => Filtered observations: 38
+  => Changed observations: 0.033531
+
+Bundle adjustment report
+------------------------
+    Residuals : 5988
+   Parameters : 947
+   Iterations : 2
+         Time : 0.0064064 [s]
+ Initial cost : 0.572529 [px]
+   Final cost : 0.561053 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 9
+  => Filtered observations: 0
+  => Changed observations: 0.003006
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 6
+  => Merged observations: 21
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  4.505870e+03    0.00e+00    2.40e+02   0.00e+00   0.00e+00  1.00e+04        0    6.19e-03    1.37e-02
+   1  4.474848e+03    3.10e+01    3.77e+00   4.58e+00   1.00e+00  3.00e+04        1    1.96e-02    3.33e-02
+   2  4.474777e+03    7.16e-02    1.98e+00   2.08e+00   1.03e+00  9.00e+04        1    1.71e-02    5.05e-02
+   3  4.474772e+03    4.77e-03    1.99e+00   1.07e+00   1.03e+00  2.70e+05        1    1.74e-02    6.79e-02
+   4  4.474771e+03    7.33e-04    1.97e+00   5.35e-01   1.01e+00  8.10e+05        1    1.81e-02    8.60e-02
+   5  4.474771e+03    1.23e-04    7.16e-01   2.67e-01   1.02e+00  2.43e+06        1    1.79e-02    1.04e-01
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 14922
+   Parameters : 4566
+   Iterations : 6
+         Time : 0.104065 [s]
+ Initial cost : 0.54951 [px]
+   Final cost : 0.547611 [px]
+  Termination : Convergence
+
+  => Completed observations: 3
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000402
+  => Filtered images: 0
+
+==============================================================================
+Registering image #22 (20)
+==============================================================================
+
+  => Image sees 256 / 356 points
+
+Pose refinement report
+----------------------
+    Residuals : 556
+   Parameters : 7
+   Iterations : 13
+         Time : 0.0031811 [s]
+ Initial cost : 0.75534 [px]
+   Final cost : 0.664979 [px]
+  Termination : Convergence
+
+  => Continued observations: 242
+  => Added observations: 95
+
+Bundle adjustment report
+------------------------
+    Residuals : 5478
+   Parameters : 866
+   Iterations : 7
+         Time : 0.0200079 [s]
+ Initial cost : 0.574294 [px]
+   Final cost : 0.55933 [px]
+  Termination : Convergence
+
+  => Merged observations: 61
+  => Completed observations: 8
+  => Filtered observations: 75
+  => Changed observations: 0.052574
+
+Bundle adjustment report
+------------------------
+    Residuals : 5300
+   Parameters : 896
+   Iterations : 2
+         Time : 0.0057058 [s]
+ Initial cost : 0.641163 [px]
+   Final cost : 0.62825 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 17
+  => Filtered observations: 0
+  => Changed observations: 0.006415
+
+==============================================================================
+Registering image #2 (21)
+==============================================================================
+
+  => Image sees 242 / 340 points
+
+Pose refinement report
+----------------------
+    Residuals : 504
+   Parameters : 7
+   Iterations : 13
+         Time : 0.0028449 [s]
+ Initial cost : 0.723016 [px]
+   Final cost : 0.634564 [px]
+  Termination : Convergence
+
+  => Continued observations: 233
+  => Added observations: 63
+
+Bundle adjustment report
+------------------------
+    Residuals : 6286
+   Parameters : 785
+   Iterations : 4
+         Time : 0.013251 [s]
+ Initial cost : 0.521576 [px]
+   Final cost : 0.510019 [px]
+  Termination : Convergence
+
+  => Merged observations: 11
+  => Completed observations: 13
+  => Filtered observations: 28
+  => Changed observations: 0.016545
+
+Bundle adjustment report
+------------------------
+    Residuals : 6388
+   Parameters : 800
+   Iterations : 2
+         Time : 0.0066992 [s]
+ Initial cost : 0.60693 [px]
+   Final cost : 0.597891 [px]
+  Termination : Convergence
+
+  => Merged observations: 17
+  => Completed observations: 4
+  => Filtered observations: 0
+  => Changed observations: 0.006575
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 10
+  => Merged observations: 9
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  5.435930e+03    0.00e+00    2.13e+02   0.00e+00   0.00e+00  1.00e+04        0    6.69e-03    1.55e-02
+   1  5.396576e+03    3.94e+01    2.62e+00   5.77e+00   1.00e+00  3.00e+04        1    2.27e-02    3.82e-02
+   2  5.396408e+03    1.68e-01    1.99e+00   4.25e+00   1.02e+00  9.00e+04        1    2.01e-02    5.84e-02
+   3  5.396375e+03    3.29e-02    1.94e+00   2.76e+00   9.98e-01  2.70e+05        1    2.05e-02    7.88e-02
+   4  5.396360e+03    1.47e-02    1.99e+00   2.20e+00   9.95e-01  8.10e+05        1    1.94e-02    9.83e-02
+   5  5.396357e+03    3.16e-03    2.00e+00   1.23e+00   1.01e+00  2.43e+06        1    1.95e-02    1.18e-01
+   6  5.396357e+03    1.61e-04    8.59e-01   2.92e-01   1.04e+00  7.29e+06        1    2.07e-02    1.39e-01
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 16092
+   Parameters : 4718
+   Iterations : 7
+         Time : 0.138757 [s]
+ Initial cost : 0.581208 [px]
+   Final cost : 0.579089 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 12
+  => Filtered observations: 1
+  => Changed observations: 0.001616
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  5.401987e+03    0.00e+00    8.78e+01   0.00e+00   0.00e+00  1.00e+04        0    6.92e-03    1.63e-02
+   1  5.394693e+03    7.29e+00    1.99e+00   4.54e-01   9.99e-01  3.00e+04        1    2.27e-02    3.90e-02
+   2  5.394691e+03    2.16e-03    3.26e-01   1.30e-01   9.71e-01  9.00e+04        1    1.95e-02    5.85e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 16090
+   Parameters : 4715
+   Iterations : 3
+         Time : 0.0586324 [s]
+ Initial cost : 0.579427 [px]
+   Final cost : 0.579036 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 0
+  => Changed observations: 0.000000
+  => Filtered images: 0
+
+==============================================================================
+Registering image #23 (22)
+==============================================================================
+
+  => Image sees 247 / 335 points
+
+Pose refinement report
+----------------------
+    Residuals : 546
+   Parameters : 7
+   Iterations : 9
+         Time : 0.0021551 [s]
+ Initial cost : 0.758153 [px]
+   Final cost : 0.611197 [px]
+  Termination : Convergence
+
+  => Continued observations: 239
+  => Added observations: 100
+
+Bundle adjustment report
+------------------------
+    Residuals : 5416
+   Parameters : 845
+   Iterations : 6
+         Time : 0.0172837 [s]
+ Initial cost : 0.557832 [px]
+   Final cost : 0.54339 [px]
+  Termination : Convergence
+
+  => Merged observations: 48
+  => Completed observations: 9
+  => Filtered observations: 44
+  => Changed observations: 0.037297
+
+Bundle adjustment report
+------------------------
+    Residuals : 5354
+   Parameters : 830
+   Iterations : 2
+         Time : 0.0056925 [s]
+ Initial cost : 0.634811 [px]
+   Final cost : 0.623998 [px]
+  Termination : Convergence
+
+  => Merged observations: 16
+  => Completed observations: 8
+  => Filtered observations: 0
+  => Changed observations: 0.008965
+
+==============================================================================
+Registering image #13 (23)
+==============================================================================
+
+  => Image sees 229 / 307 points
+
+Pose refinement report
+----------------------
+    Residuals : 508
+   Parameters : 7
+   Iterations : 11
+         Time : 0.0024583 [s]
+ Initial cost : 0.792491 [px]
+   Final cost : 0.641842 [px]
+  Termination : Convergence
+
+  => Continued observations: 222
+  => Added observations: 56
+
+Bundle adjustment report
+------------------------
+    Residuals : 6280
+   Parameters : 677
+   Iterations : 5
+         Time : 0.0153994 [s]
+ Initial cost : 0.50796 [px]
+   Final cost : 0.498393 [px]
+  Termination : Convergence
+
+  => Merged observations: 57
+  => Completed observations: 11
+  => Filtered observations: 30
+  => Changed observations: 0.031210
+
+Bundle adjustment report
+------------------------
+    Residuals : 6184
+   Parameters : 692
+   Iterations : 2
+         Time : 0.0058849 [s]
+ Initial cost : 0.609313 [px]
+   Final cost : 0.601128 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 2
+  => Filtered observations: 0
+  => Changed observations: 0.000647
+
+==============================================================================
+Registering image #26 (24)
+==============================================================================
+
+  => Image sees 211 / 267 points
+
+Pose refinement report
+----------------------
+    Residuals : 486
+   Parameters : 7
+   Iterations : 14
+         Time : 0.0029341 [s]
+ Initial cost : 0.76693 [px]
+   Final cost : 0.673694 [px]
+  Termination : Convergence
+
+  => Continued observations: 204
+  => Added observations: 58
+
+Bundle adjustment report
+------------------------
+    Residuals : 5166
+   Parameters : 653
+   Iterations : 4
+         Time : 0.0106084 [s]
+ Initial cost : 0.581448 [px]
+   Final cost : 0.571114 [px]
+  Termination : Convergence
+
+  => Merged observations: 25
+  => Completed observations: 8
+  => Filtered observations: 43
+  => Changed observations: 0.029423
+
+Bundle adjustment report
+------------------------
+    Residuals : 5086
+   Parameters : 635
+   Iterations : 2
+         Time : 0.0052056 [s]
+ Initial cost : 0.682702 [px]
+   Final cost : 0.672629 [px]
+  Termination : Convergence
+
+  => Merged observations: 6
+  => Completed observations: 10
+  => Filtered observations: 0
+  => Changed observations: 0.006292
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 18
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  6.527505e+03    0.00e+00    2.54e+02   0.00e+00   0.00e+00  1.00e+04        0    7.40e-03    1.65e-02
+   1  6.468190e+03    5.93e+01    2.67e+00   4.40e+00   9.99e-01  3.00e+04        1    2.47e-02    4.12e-02
+   2  6.468107e+03    8.30e-02    2.00e+00   2.28e+00   9.99e-01  9.00e+04        1    2.20e-02    6.32e-02
+   3  6.468101e+03    5.96e-03    2.00e+00   1.05e+00   1.02e+00  2.70e+05        1    2.20e-02    8.52e-02
+   4  6.468100e+03    6.90e-04    1.44e+00   3.85e-01   1.02e+00  8.10e+05        1    2.20e-02    1.07e-01
+   5  6.468100e+03    1.24e-04    6.36e-01   2.41e-01   1.02e+00  2.43e+06        1    2.20e-02    1.29e-01
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 17742
+   Parameters : 4937
+   Iterations : 6
+         Time : 0.129368 [s]
+ Initial cost : 0.606558 [px]
+   Final cost : 0.603792 [px]
+  Termination : Convergence
+
+  => Completed observations: 3
+  => Merged observations: 0
+  => Filtered observations: 2
+  => Changed observations: 0.000564
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  6.473567e+03    0.00e+00    1.82e+02   0.00e+00   0.00e+00  1.00e+04        0    7.37e-03    1.60e-02
+   1  6.468005e+03    5.56e+00    2.00e+00   8.86e-01   1.00e+00  3.00e+04        1    2.53e-02    4.13e-02
+   2  6.468002e+03    3.27e-03    6.27e-01   2.59e-01   1.05e+00  9.00e+04        1    2.21e-02    6.35e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 17744
+   Parameters : 4937
+   Iterations : 3
+         Time : 0.063613 [s]
+ Initial cost : 0.604013 [px]
+   Final cost : 0.603753 [px]
+  Termination : Convergence
+
+  => Completed observations: 0
+  => Merged observations: 0
+  => Filtered observations: 1
+  => Changed observations: 0.000113
+  => Filtered images: 0
+
+==============================================================================
+Registering image #16 (25)
+==============================================================================
+
+  => Image sees 189 / 325 points
+
+Pose refinement report
+----------------------
+    Residuals : 390
+   Parameters : 7
+   Iterations : 11
+         Time : 0.0018606 [s]
+ Initial cost : 0.779938 [px]
+   Final cost : 0.708575 [px]
+  Termination : Convergence
+
+  => Continued observations: 171
+  => Added observations: 108
+
+Bundle adjustment report
+------------------------
+    Residuals : 6060
+   Parameters : 629
+   Iterations : 7
+         Time : 0.0210732 [s]
+ Initial cost : 0.526901 [px]
+   Final cost : 0.515589 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 10
+  => Filtered observations: 36
+  => Changed observations: 0.015182
+
+Bundle adjustment report
+------------------------
+    Residuals : 6006
+   Parameters : 623
+   Iterations : 3
+         Time : 0.0088478 [s]
+ Initial cost : 0.616398 [px]
+   Final cost : 0.607514 [px]
+  Termination : Convergence
+
+  => Merged observations: 12
+  => Completed observations: 3
+  => Filtered observations: 1
+  => Changed observations: 0.005328
+
+==============================================================================
+Registering image #15 (26)
+==============================================================================
+
+  => Image sees 213 / 297 points
+
+Pose refinement report
+----------------------
+    Residuals : 494
+   Parameters : 7
+   Iterations : 16
+         Time : 0.0033953 [s]
+ Initial cost : 0.75859 [px]
+   Final cost : 0.703893 [px]
+  Termination : Convergence
+
+  => Continued observations: 204
+  => Added observations: 98
+
+Bundle adjustment report
+------------------------
+    Residuals : 5706
+   Parameters : 668
+   Iterations : 5
+         Time : 0.0144942 [s]
+ Initial cost : 0.581733 [px]
+   Final cost : 0.573021 [px]
+  Termination : Convergence
+
+  => Merged observations: 44
+  => Completed observations: 7
+  => Filtered observations: 64
+  => Changed observations: 0.040308
+
+Bundle adjustment report
+------------------------
+    Residuals : 5174
+   Parameters : 617
+   Iterations : 2
+         Time : 0.0052208 [s]
+ Initial cost : 0.680401 [px]
+   Final cost : 0.670978 [px]
+  Termination : Convergence
+
+  => Merged observations: 10
+  => Completed observations: 10
+  => Filtered observations: 0
+  => Changed observations: 0.007731
+
+==============================================================================
+Registering image #29 (27)
+==============================================================================
+
+  => Image sees 215 / 273 points
+
+Pose refinement report
+----------------------
+    Residuals : 452
+   Parameters : 7
+   Iterations : 16
+         Time : 0.0031372 [s]
+ Initial cost : 0.719118 [px]
+   Final cost : 0.679392 [px]
+  Termination : Convergence
+
+  => Continued observations: 193
+  => Added observations: 40
+
+Bundle adjustment report
+------------------------
+    Residuals : 5760
+   Parameters : 596
+   Iterations : 4
+         Time : 0.011142 [s]
+ Initial cost : 0.561305 [px]
+   Final cost : 0.547605 [px]
+  Termination : Convergence
+
+  => Merged observations: 99
+  => Completed observations: 6
+  => Filtered observations: 50
+  => Changed observations: 0.053819
+
+Bundle adjustment report
+------------------------
+    Residuals : 5552
+   Parameters : 620
+   Iterations : 2
+         Time : 0.005405 [s]
+ Initial cost : 0.662518 [px]
+   Final cost : 0.651336 [px]
+  Termination : Convergence
+
+  => Merged observations: 0
+  => Completed observations: 7
+  => Filtered observations: 3
+  => Changed observations: 0.003602
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 15
+  => Merged observations: 63
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  7.661202e+03    0.00e+00    3.39e+02   0.00e+00   0.00e+00  1.00e+04        0    8.02e-03    1.79e-02
+   1  7.569204e+03    9.20e+01    4.97e+00   8.66e+00   1.00e+00  3.00e+04        1    2.93e-02    4.72e-02
+   2  7.568801e+03    4.03e-01    4.20e+00   7.92e+00   9.98e-01  9.00e+04        1    2.52e-02    7.24e-02
+   3  7.568716e+03    8.52e-02    2.89e+00   4.80e+00   9.81e-01  2.70e+05        1    2.49e-02    9.73e-02
+   4  7.568686e+03    3.03e-02    2.00e+00   3.08e+00   9.88e-01  8.10e+05        1    2.50e-02    1.22e-01
+   5  7.568678e+03    7.23e-03    1.99e+00   1.83e+00   1.01e+00  2.43e+06        1    2.53e-02    1.48e-01
+   6  7.568678e+03    4.37e-04    1.86e+00   4.80e-01   1.04e+00  7.29e+06        1    2.52e-02    1.73e-01
+   7  7.568678e+03    7.04e-06    6.93e-02   5.58e-02   1.08e+00  2.19e+07        1    2.55e-02    1.98e-01
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 19174
+   Parameters : 5180
+   Iterations : 8
+         Time : 0.198527 [s]
+ Initial cost : 0.632109 [px]
+   Final cost : 0.628281 [px]
+  Termination : Convergence
+
+  => Completed observations: 2
+  => Merged observations: 0
+  => Filtered observations: 2
+  => Changed observations: 0.000417
+  => Filtered images: 0
+
+==============================================================================
+Registering image #11 (28)
+==============================================================================
+
+  => Image sees 214 / 261 points
+
+Pose refinement report
+----------------------
+    Residuals : 490
+   Parameters : 7
+   Iterations : 12
+         Time : 0.0025409 [s]
+ Initial cost : 0.773653 [px]
+   Final cost : 0.706252 [px]
+  Termination : Convergence
+
+  => Continued observations: 204
+  => Added observations: 50
+
+Bundle adjustment report
+------------------------
+    Residuals : 5584
+   Parameters : 596
+   Iterations : 6
+         Time : 0.0165786 [s]
+ Initial cost : 0.580751 [px]
+   Final cost : 0.567932 [px]
+  Termination : Convergence
+
+  => Merged observations: 65
+  => Completed observations: 12
+  => Filtered observations: 46
+  => Changed observations: 0.044054
+
+Bundle adjustment report
+------------------------
+    Residuals : 5514
+   Parameters : 578
+   Iterations : 2
+         Time : 0.0055571 [s]
+ Initial cost : 0.688683 [px]
+   Final cost : 0.677662 [px]
+  Termination : Convergence
+
+  => Merged observations: 15
+  => Completed observations: 9
+  => Filtered observations: 1
+  => Changed observations: 0.009068
+
+==============================================================================
+Registering image #18 (29)
+==============================================================================
+
+  => Image sees 163 / 220 points
+
+Pose refinement report
+----------------------
+    Residuals : 350
+   Parameters : 7
+   Iterations : 13
+         Time : 0.0020012 [s]
+ Initial cost : 0.773727 [px]
+   Final cost : 0.73344 [px]
+  Termination : Convergence
+
+  => Continued observations: 144
+  => Added observations: 49
+
+Bundle adjustment report
+------------------------
+    Residuals : 4808
+   Parameters : 407
+   Iterations : 6
+         Time : 0.0145117 [s]
+ Initial cost : 0.597561 [px]
+   Final cost : 0.581433 [px]
+  Termination : Convergence
+
+  => Merged observations: 52
+  => Completed observations: 5
+  => Filtered observations: 44
+  => Changed observations: 0.042013
+
+Bundle adjustment report
+------------------------
+    Residuals : 4336
+   Parameters : 377
+   Iterations : 2
+         Time : 0.0044452 [s]
+ Initial cost : 0.715187 [px]
+   Final cost : 0.705633 [px]
+  Termination : Convergence
+
+  => Merged observations: 19
+  => Completed observations: 4
+  => Filtered observations: 3
+  => Changed observations: 0.011993
+
+==============================================================================
+Retriangulation
+==============================================================================
+
+  => Completed observations: 11
+  => Merged observations: 0
+  => Retriangulated observations: 0
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  8.400592e+03    0.00e+00    2.30e+02   0.00e+00   0.00e+00  1.00e+04        0    8.53e-03    1.90e-02
+   1  8.339085e+03    6.15e+01    4.31e+00   4.65e+00   9.99e-01  3.00e+04        1    3.32e-02    5.22e-02
+   2  8.338995e+03    9.01e-02    1.91e+00   7.31e-01   1.04e+00  9.00e+04        1    2.90e-02    8.12e-02
+   3  8.338993e+03    1.68e-03    6.35e-01   2.42e-01   1.11e+00  2.70e+05        1    2.75e-02    1.09e-01
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 19958
+   Parameters : 5251
+   Iterations : 4
+         Time : 0.108894 [s]
+ Initial cost : 0.648778 [px]
+   Final cost : 0.646395 [px]
+  Termination : Convergence
+
+  => Completed observations: 3
+  => Merged observations: 0
+  => Filtered observations: 2
+  => Changed observations: 0.000501
+
+==============================================================================
+Global bundle adjustment
+==============================================================================
+
+iter      cost      cost_change  |gradient|   |step|    tr_ratio  tr_radius  ls_iter  iter_time  total_time
+   0  8.346450e+03    0.00e+00    9.48e+01   0.00e+00   0.00e+00  1.00e+04        0    8.77e-03    1.89e-02
+   1  8.340975e+03    5.47e+00    1.95e+00   1.22e+00   1.00e+00  3.00e+04        1    3.67e-02    5.56e-02
+   2  8.340971e+03    4.18e-03    6.08e-01   2.75e-01   1.06e+00  9.00e+04        1    2.73e-02    8.29e-02
+
+
+Bundle adjustment report
+------------------------
+    Residuals : 19960
+   Parameters : 5251
+   Iterations : 3
+         Time : 0.0831318 [s]
+ Initial cost : 0.646652 [px]
+   Final cost : 0.64644 [px]
+  Termination : Convergence
+
+  => Completed observations: 1
+  => Merged observations: 0
+  => Filtered observations: 1
+  => Changed observations: 0.000200
+  => Filtered images: 0
+
+Elapsed time: 0.056 [minutes]
