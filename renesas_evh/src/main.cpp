@@ -9,7 +9,7 @@
 #include <MNN/ImageProcess.hpp>
 #include <MNN/Interpreter.hpp>
 #include <iostream>
-#include <fstream>
+#include <ctime>
 using namespace MNN;
 using namespace MNN::CV;
 using namespace MNN::Express;
@@ -190,6 +190,7 @@ std::vector<CV::Scalar> colors = {
     {250,66,99},
 };
 int main(){
+    std::clock_t start = std::clock();
     BackendConfig backend_config;
     Express::Executor::getGlobalExecutor()->setGlobalExecutorConfig(MNN_FORWARD_CPU,backend_config,4);
     const std::string file = "020.png";
@@ -213,30 +214,8 @@ int main(){
     const auto pshape = Express::INTS({height,width,CHNL});
     const auto ori_padshape = Express::INTS({PAD_H,PAD_W,CHNL});  // in NHWC format
     const auto padshape = Express::INTS({CHNL,PAD_H,PAD_W});      // in NCHW format
-    float *pc = new float[PAD_IMGSIZE];
 
-    // padding with 0 -> (H = 736, W = 1312, C = 3)
-    uint8_t *tmpimg = new uint8_t[PAD_IMGSIZE];
-    
-    for(size_t c=0;c<3;c++){
-        for(size_t h=0;h<PAD_H;h++){  
-            for(size_t w=0;w<PAD_W;w++){                  
-                if(h<height && w<width) tmpimg[((c*PAD_H)+h)*PAD_W+w] = imgarr[((h*width)+w)*CHNL+c];
-                else tmpimg[((c*PAD_H)+h)*PAD_W+w] = 0;
-            }
-        }
-    }
-
-    for(size_t i=0;i<PAD_IMGSIZE;i++) pc[i] = tmpimg[i];
-    auto frgb = CV::_Const(pc,padshape,format,halide_type_of<float>());
-    free(tmpimg);
-
-    // std::vector<int> pdavals {0,PAD_H-height,PAD_W-width,0,0};
-    // auto pads = Express::_Const(static_cast<void*>(pdavals.data()),{3,2},Express::NCHW,halide_type_of<int>());
-    // auto frgb = Express::_Pad(rgb,pads,CV::CONSTANT);
-    // for(auto &dsize:frgb->getInfo()->dim) std::cout<<dsize<<' ';
-    // std::cout<<'\n';
-
+    auto frgb = _Cast<float>(rgb);
     // img * 2.0f
     Express::VARP _2f = Express::_Scalar<float>(2.0);
     Express::VARP crgb = frgb*_2f;        
@@ -247,22 +226,15 @@ int main(){
     Express::VARP _1f = Express::_Scalar<float>(1.0f);
     Express::VARP norm_rgb = crgbd - _1f;
 
-    auto normimg_rgb = norm_rgb->readMap<float>();
-    for(size_t c=0;c<CHNL;c++){
-        for(size_t h=0;h<PAD_H;h++){
-            for(size_t w=0;w<PAD_W;w++){
-                if(h<height && w<width) pc[((c*PAD_H)+h)*PAD_W+w] = normimg_rgb[((c*PAD_H)+h)*PAD_W+w];
-                else pc[((c*PAD_H)+h)*PAD_W+w] = 0;
-            }
-        }
-    }
-    norm_rgb = CV::_Const(pc,padshape,format,halide_type_of<float>());
-
-    free(pc);
+    std::vector<int> pdavals {0,PAD_H-height,0,PAD_W-width,0,0};
+    auto pads = Express::_Const(static_cast<void*>(pdavals.data()),{3,2},Express::NCHW,halide_type_of<int>());
+    norm_rgb = Express::_Pad(norm_rgb,pads,CV::CONSTANT);
 
     // Expand dims 
     auto exp_rgb = Express::_ExpandDims(norm_rgb,0);
+    exp_rgb = _Convert(exp_rgb,NCHW);
     
+    std::clock_t fpnpre = std::clock();
     // load model
     const std::string FPN_file = "../FPNInception_736_1312.mnn";
     const std::vector<std::string> fpn_input_names{"input.1"};
@@ -272,6 +244,7 @@ int main(){
     fpn_module.reset(Express::Module::load(fpn_input_names,fpn_output_names,FPN_file.c_str(),nullptr,&fpn_mdconfig));
     exp_rgb = _Convert(exp_rgb,NC4HW4);
     std::vector<Express::VARP> fpn_outputs = fpn_module->onForward({exp_rgb});
+    std::clock_t fpnpost = std::clock();
     fpn_outputs[0] = _Convert(fpn_outputs[0], MNN::Express::NCHW);
     auto deblur_rgb = Express::_Squeeze(fpn_outputs[0],{0});
 
@@ -292,7 +265,7 @@ int main(){
     yolo_input_rgb = yolo_input_rgb / _255f;
     auto yolo_final_input_rgb = Express::_ExpandDims(yolo_input_rgb,0);
 
-    
+    std::clock_t yolopre = std::clock();
     const std::string YOLO_file = "../yolo11n.mnn";
     const std::vector<std::string> yolo_input_names{"images"};
     const std::vector<std::string> yolo_output_names{"output0"};
@@ -303,7 +276,7 @@ int main(){
 
     yolo_inputs[0] = yolo_final_input_rgb;
     std::vector<Express::VARP> yolo_outputs = yolo_module->onForward(yolo_inputs);
-    
+    std::clock_t yoloppost = std::clock();
     Express::VARP yolo_output = Express::_Transpose(Express::_Squeeze(yolo_outputs[0],{0}),{1,0});
 
     auto yolo_arr = yolo_output->readMap<float>();
@@ -360,6 +333,12 @@ int main(){
     
     if(CV::imwrite("../submit_final_img/1_final_detected_"+file,deblur_final_img,{})) std::cout<<"write final img success\n";
     else std::cout<<"write final img fail\n";   
+    std::clock_t end = std::clock();
+    std::cout<<"\nComplete pipeline speed profile: \n";
+    std::cout<<"deblur time(s) \t"<<(double)(fpnpost-fpnpre)/CLOCKS_PER_SEC<<'\n';
+    std::cout<<"detect time(s) \t"<<(double)(yoloppost-yolopre)/CLOCKS_PER_SEC<<'\n';
+    std::cout<<"total time(s) \t"<<(double)(end-start)/CLOCKS_PER_SEC<<'\n';
+    std::cout<<"\n";
 
     class_ids.clear();
     rgb = CV::resize(rgb,yolo_rgb_size);
