@@ -189,10 +189,12 @@ std::vector<CV::Scalar> colors = {
     {69,249,116},
     {250,66,99},
 };
-int main(){
+int main(int argc,char *argv[]){
     std::clock_t start = std::clock();
     BackendConfig backend_config;
-    Express::Executor::getGlobalExecutor()->setGlobalExecutorConfig(MNN_FORWARD_CPU,backend_config,4);
+    int thread = 4;
+    if(argc>=2) thread = atoi(argv[1]);
+    Express::Executor::getGlobalExecutor()->setGlobalExecutorConfig(MNN_FORWARD_CPU,backend_config,thread);
     const std::string file = "020.png";
     auto img = CV::imread("../test_img/"+file); // img path modified later
 
@@ -400,6 +402,8 @@ int main(){
 
     free(score_arr);
     free(rects);
+    std::clock_t complete_end = std::clock();
+    std::cout<<"\ncomplete runtime(s)\t"<<(double)(complete_end-start)/CLOCKS_PER_SEC<<'\n';
     return 0;
 }
 size_t argmax(const float *arr, size_t len){
