@@ -191,10 +191,19 @@ std::vector<CV::Scalar> colors = {
 };
 int main(int argc,char *argv[]){
     std::clock_t start = std::clock();
+    ScheduleConfig sconfig;
     BackendConfig backend_config;
+    backend_config.memory = BackendConfig::Memory_Low;
+    sconfig.backendConfig = &backend_config;
     int thread = 4;
     if(argc>=2) thread = atoi(argv[1]);
-    Express::Executor::getGlobalExecutor()->setGlobalExecutorConfig(MNN_FORWARD_CPU,backend_config,thread);
+    sconfig.numThread = thread;
+    std::shared_ptr<Executor::RuntimeManager> rtmgr = std::shared_ptr<Executor::RuntimeManager>(Executor::RuntimeManager::createRuntimeManager(sconfig));
+    if(rtmgr == nullptr){
+        MNN_ERROR("Empty RuntimeManager\n");
+        return 0;
+    }
+    rtmgr->setCache(".cachefile");
     const std::string file = "020.png";
     auto img = CV::imread("../test_img/"+file); // img path modified later
 
@@ -238,14 +247,16 @@ int main(int argc,char *argv[]){
     
     std::clock_t fpnpre = std::clock();
     // load model
-    const std::string FPN_file = "../FPNInception_736_1312.mnn";
-    const std::vector<std::string> fpn_input_names{"input.1"};
-    const std::vector<std::string> fpn_output_names{"3695"};    // rediculous output name! (look it up on NETRON)
-    Express::Module::Config fpn_mdconfig;
-    std::unique_ptr<Express::Module> fpn_module;
-    fpn_module.reset(Express::Module::load(fpn_input_names,fpn_output_names,FPN_file.c_str(),nullptr,&fpn_mdconfig));
+    std::string FPN_file = "../FPNInception_736_1312.mnn";
+    std::vector<std::string> fpn_input_names{"input.1"};
+    std::vector<std::string> fpn_output_names{"3695"};    // rediculous output name! (look it up on NETRON)
+    // Express::Module::Config fpn_mdconfig;
+    // std::unique_ptr<Express::Module> fpn_module;
+    // fpn_module.reset(Express::Module::load(fpn_input_names,fpn_output_names,FPN_file.c_str(),nullptr,&fpn_mdconfig));
+    std::shared_ptr<Module> fpn_net(Module::load(fpn_input_names,fpn_output_names,FPN_file.c_str(),rtmgr));
     exp_rgb = _Convert(exp_rgb,NC4HW4);
-    std::vector<Express::VARP> fpn_outputs = fpn_module->onForward({exp_rgb});
+    // std::vector<Express::VARP> fpn_outputs = fpn_module->onForward({exp_rgb});
+    std::vector<Express::VARP> fpn_outputs = fpn_net->onForward({exp_rgb});
     std::clock_t fpnpost = std::clock();
     fpn_outputs[0] = _Convert(fpn_outputs[0], MNN::Express::NCHW);
     auto deblur_rgb = Express::_Squeeze(fpn_outputs[0],{0});
@@ -268,16 +279,18 @@ int main(int argc,char *argv[]){
     auto yolo_final_input_rgb = Express::_ExpandDims(yolo_input_rgb,0);
 
     std::clock_t yolopre = std::clock();
-    const std::string YOLO_file = "../yolo11n.mnn";
-    const std::vector<std::string> yolo_input_names{"images"};
-    const std::vector<std::string> yolo_output_names{"output0"};
-    Express::Module::Config yolo_mdconfig;
-    std::unique_ptr<Express::Module> yolo_module;
-    yolo_module.reset(Express::Module::load(yolo_input_names,yolo_output_names,YOLO_file.c_str(),nullptr,&yolo_mdconfig));
-    std::vector<Express::VARP> yolo_inputs(1);
+    std::string YOLO_file = "../yolo11n.mnn";
+    std::vector<std::string> yolo_input_names{"images"};
+    std::vector<std::string> yolo_output_names{"output0"};
+    // Express::Module::Config yolo_mdconfig;
+    // std::unique_ptr<Express::Module> yolo_module;
+    // yolo_module.reset(Express::Module::load(yolo_input_names,yolo_output_names,YOLO_file.c_str(),nullptr,&yolo_mdconfig));
+    // std::vector<Express::VARP> yolo_inputs(1);
 
-    yolo_inputs[0] = yolo_final_input_rgb;
-    std::vector<Express::VARP> yolo_outputs = yolo_module->onForward(yolo_inputs);
+    // yolo_inputs[0] = yolo_final_input_rgb;
+    // std::vector<Express::VARP> yolo_outputs = yolo_module->onForward(yolo_inputs);
+    std::shared_ptr<Module> yolo_net(Module::load(yolo_input_names,yolo_output_names,YOLO_file.c_str(),rtmgr));
+    std::vector<Express::VARP> yolo_outputs = yolo_net->onForward({yolo_final_input_rgb});
     std::clock_t yoloppost = std::clock();
     Express::VARP yolo_output = Express::_Transpose(Express::_Squeeze(yolo_outputs[0],{0}),{1,0});
 
@@ -342,68 +355,69 @@ int main(int argc,char *argv[]){
     std::cout<<"total time(s) \t"<<(double)(end-start)/CLOCKS_PER_SEC<<'\n';
     std::cout<<"\n";
 
-    class_ids.clear();
-    rgb = CV::resize(rgb,yolo_rgb_size);
-    yolo_input_rgb = Express::_Cast<float>(rgb);
-    yolo_input_rgb = yolo_input_rgb / _255f;
-    yolo_final_input_rgb = Express::_ExpandDims(yolo_input_rgb,0);
+    // class_ids.clear();
+    // rgb = CV::resize(rgb,yolo_rgb_size);
+    // yolo_input_rgb = Express::_Cast<float>(rgb);
+    // yolo_input_rgb = yolo_input_rgb / _255f;
+    // yolo_final_input_rgb = Express::_ExpandDims(yolo_input_rgb,0);
 
-    yolo_inputs[0] = yolo_final_input_rgb;
-    yolo_outputs = yolo_module->onForward(yolo_inputs);
+    // yolo_inputs[0] = yolo_final_input_rgb;
+    // yolo_outputs = yolo_module->onForward(yolo_inputs);
 
-    yolo_output = Express::_Transpose(Express::_Squeeze(yolo_outputs[0],{0}),{1,0});
+    // yolo_output = Express::_Transpose(Express::_Squeeze(yolo_outputs[0],{0}),{1,0});
 
-    yolo_arr = yolo_output->readMap<float>();
-    const size_t rows1 = yolo_output->getInfo()->dim[0];
-    const size_t cols1 = yolo_output->getInfo()->dim[1];
+    // yolo_arr = yolo_output->readMap<float>();
+    // const size_t rows1 = yolo_output->getInfo()->dim[0];
+    // const size_t cols1 = yolo_output->getInfo()->dim[1];
 
-    total = 0;
-    for(size_t i=0;i<rows1;i++){
-        size_t class_id = argmax(yolo_arr+(i*cols1+4),cols1-4);
-        float max_score = yolo_arr[i*cols1+4+class_id];
-        if(max_score > THRSHLD){
+    // total = 0;
+    // for(size_t i=0;i<rows1;i++){
+    //     size_t class_id = argmax(yolo_arr+(i*cols1+4),cols1-4);
+    //     float max_score = yolo_arr[i*cols1+4+class_id];
+    //     if(max_score > THRSHLD){
             
-            auto x = yolo_arr[i*cols1];
-            auto y = yolo_arr[i*cols1+1];
-            auto w = yolo_arr[i*cols1+2];
-            auto h = yolo_arr[i*cols1+3];
+    //         auto x = yolo_arr[i*cols1];
+    //         auto y = yolo_arr[i*cols1+1];
+    //         auto w = yolo_arr[i*cols1+2];
+    //         auto h = yolo_arr[i*cols1+3];
 
-            float *rect = rects+total*4;
-            rect[0] = ((x-w/2.0f)*x_fac);
-            rect[1] = ((y-h/2.0f)*y_fac);
-            rect[2] = (w*x_fac);
-            rect[3] = (h*y_fac);
-            score_arr[total] = max_score;
-            class_ids.push_back(class_id);
+    //         float *rect = rects+total*4;
+    //         rect[0] = ((x-w/2.0f)*x_fac);
+    //         rect[1] = ((y-h/2.0f)*y_fac);
+    //         rect[2] = (w*x_fac);
+    //         rect[3] = (h*y_fac);
+    //         score_arr[total] = max_score;
+    //         class_ids.push_back(class_id);
             
-            total++;
-        }
-    }  
-    boxes = Express::_Const(rects,{total,4});
-    scores = Express::_Const(score_arr,{total});
-    indices_varp = Express::_Nms(boxes,scores,MAX_DETECTIONS,IOU_THRSHLD,THRSHLD);
+    //         total++;
+    //     }
+    // }  
+    // boxes = Express::_Const(rects,{total,4});
+    // scores = Express::_Const(score_arr,{total});
+    // indices_varp = Express::_Nms(boxes,scores,MAX_DETECTIONS,IOU_THRSHLD,THRSHLD);
 
     
-    obj_size = indices_varp->getInfo()->size;
-    if(obj_size > 0){
-        auto indices = indices_varp->readMap<int>();
-        for(int i=0;i<obj_size;i++){
-            if(indices[i] == -1) continue;
-            std::cout<<name_classes[class_ids[indices[i]]]<<'\n';
-            auto index = indices[i];
-            CV::Point pt1,pt2;
-            pt1.set(rects[index*4],rects[index*4+1]);
-            pt2.set(rects[index*4]+rects[index*4+2],rects[index*4+1]+rects[index*4+3]);
-            CV::rectangle(img,pt1,pt2,colors[class_ids[indices[i]]],2);
-        }
-    }
-    if(CV::imwrite("../submit_original_img/1_original_detected_"+file,img,{})) std::cout<<"write original img success\n";
-    else std::cout<<"write original img fail\n";   
+    // obj_size = indices_varp->getInfo()->size;
+    // if(obj_size > 0){
+    //     auto indices = indices_varp->readMap<int>();
+    //     for(int i=0;i<obj_size;i++){
+    //         if(indices[i] == -1) continue;
+    //         std::cout<<name_classes[class_ids[indices[i]]]<<'\n';
+    //         auto index = indices[i];
+    //         CV::Point pt1,pt2;
+    //         pt1.set(rects[index*4],rects[index*4+1]);
+    //         pt2.set(rects[index*4]+rects[index*4+2],rects[index*4+1]+rects[index*4+3]);
+    //         CV::rectangle(img,pt1,pt2,colors[class_ids[indices[i]]],2);
+    //     }
+    // }
+    // if(CV::imwrite("../submit_original_img/1_original_detected_"+file,img,{})) std::cout<<"write original img success\n";
+    // else std::cout<<"write original img fail\n";   
 
-    free(score_arr);
-    free(rects);
-    std::clock_t complete_end = std::clock();
-    std::cout<<"\ncomplete runtime(s)\t"<<(double)(complete_end-start)/CLOCKS_PER_SEC<<'\n';
+    // free(score_arr);
+    // free(rects);
+    // std::clock_t complete_end = std::clock();
+    // std::cout<<"\ncomplete runtime(s)\t"<<(double)(complete_end-start)/CLOCKS_PER_SEC<<'\n';
+    rtmgr->updateCache();
     return 0;
 }
 size_t argmax(const float *arr, size_t len){

@@ -7,6 +7,7 @@ import os
 from glob import glob
 from typing import Optional
 import albumentations as albu
+import time
 
 def get_normalize():
     normalize = albu.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
@@ -67,6 +68,7 @@ if __name__ == '__main__':
 
         os.makedirs(out_dir, exist_ok = True)
         for name, pair in zip(names,pairs):
+            start = time.time()
             f_img, f_mask = pair
             img_o = cv2.imread(f_img)
             img = cv2.cvtColor(img_o,cv2.COLOR_BGR2RGB)
@@ -90,13 +92,19 @@ if __name__ == '__main__':
             # add batch size dimension
             img_n = np.expand_dims(img_t,axis=0)
             ort_cess = ort.InferenceSession(model_path)
+            fpn_pre = time.time()
             outputs = ort_cess.run(None,{'input.1': img_n})
+            fpn_post= time.time()
             output,  = outputs
             d_imgnp = output[0]
             d_imgnp = (np.transpose(d_imgnp,(1,2,0)) + 1) / 2.0 * 255.0
             d_imgnp = d_imgnp.astype(np.uint8)
             d_img = cv2.cvtColor(d_imgnp,cv2.COLOR_RGB2BGR)[:h,:w,:]
             cv2.imwrite(os.path.join(out_dir,name),d_img)
+            end = time.time()
+            print(f"deblur time(s) {fpn_post-fpn_pre} total time(s) {end-start}")
+            
+
             
 
             
