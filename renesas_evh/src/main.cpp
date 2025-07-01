@@ -5,11 +5,13 @@
 #include <tools/cv/include/cv/cv.hpp>
 #include <MNN/expr/Executor.hpp>
 #include <tools/cv/include/cv/imgproc/color.hpp>
+#include <tools/cpp/ExprDebug.hpp>
 #include <MNN/expr/NeuralNetWorkOp.hpp>
 #include <MNN/ImageProcess.hpp>
 #include <MNN/Interpreter.hpp>
 #include <iostream>
 #include <ctime>
+#include <chrono>
 using namespace MNN;
 using namespace MNN::CV;
 using namespace MNN::Express;
@@ -189,8 +191,9 @@ std::vector<CV::Scalar> colors = {
     {69,249,116},
     {250,66,99},
 };
+#define DEBUG_MODE 1
 int main(int argc,char *argv[]){
-    std::clock_t start = std::clock();
+    auto start = std::chrono::system_clock::now();
     ScheduleConfig sconfig;
     BackendConfig backend_config;
     backend_config.memory = BackendConfig::Memory_Low;
@@ -204,6 +207,11 @@ int main(int argc,char *argv[]){
         return 0;
     }
     rtmgr->setCache(".cachefile");
+    rtmgr->setHint(MNN::Interpreter::CPU_LITTLECORE_DECREASE_RATE, 100);
+#if DEBUG_MODE == 1
+    rtmgr->setMode(MNN::Interpreter::Session_Debug);
+    _initTimeTrace();
+#endif
     const std::string file = "020.png";
     auto img = CV::imread("../test_img/"+file); // img path modified later
 
@@ -245,9 +253,9 @@ int main(int argc,char *argv[]){
     auto exp_rgb = Express::_ExpandDims(norm_rgb,0);
     exp_rgb = _Convert(exp_rgb,NCHW);
     
-    std::clock_t fpnpre = std::clock();
+    auto fpnpre = std::chrono::system_clock::now();
     // load model
-    std::string FPN_file = "../FPNInception_736_1312.mnn";
+    std::string FPN_file = "../FPNInception_736_1312_Q8.mnn";
     std::vector<std::string> fpn_input_names{"input.1"};
     std::vector<std::string> fpn_output_names{"3695"};    // rediculous output name! (look it up on NETRON)
     // Express::Module::Config fpn_mdconfig;
@@ -257,7 +265,34 @@ int main(int argc,char *argv[]){
     exp_rgb = _Convert(exp_rgb,NC4HW4);
     // std::vector<Express::VARP> fpn_outputs = fpn_module->onForward({exp_rgb});
     std::vector<Express::VARP> fpn_outputs = fpn_net->onForward({exp_rgb});
-    std::clock_t fpnpost = std::clock();
+    auto fpnpost = std::chrono::system_clock::now();
+
+// monitor time proportion for each type of operator.
+#if DEBUG_MODE == 1
+    if (nullptr != gTimeTraceInfo) {
+        float opSummer       = 0.0f;
+        float opFlopsSummber = 0.0f;
+        for (auto& iter : gTimeTraceInfo->mTypes) {
+            float summer      = 0.0f;
+            float summerflops = 0.0f;
+            for (auto& t : iter.second) {
+                for (auto& t0 : t.second) {
+                    summer += t0.first;
+                    summerflops += t0.second;
+                }
+            }
+            summer      = summer;
+            summerflops = summerflops;
+            MNN_PRINT("%s : %.7f, FLOP: %.7f, Speed: %.7f GFlops\n", iter.first.c_str(), summer, summerflops,
+                      summerflops / summer);
+            opSummer += summer;
+            opFlopsSummber += summerflops;
+        }
+        MNN_PRINT("OP Summer: %.7f, Flops: %.7f, Speed: %.7f GFlops\n", opSummer, opFlopsSummber,
+                  opFlopsSummber / opSummer);
+    }
+#endif
+
     fpn_outputs[0] = _Convert(fpn_outputs[0], MNN::Express::NCHW);
     auto deblur_rgb = Express::_Squeeze(fpn_outputs[0],{0});
 
@@ -278,7 +313,7 @@ int main(int argc,char *argv[]){
     yolo_input_rgb = yolo_input_rgb / _255f;
     auto yolo_final_input_rgb = Express::_ExpandDims(yolo_input_rgb,0);
 
-    std::clock_t yolopre = std::clock();
+    auto yolopre = std::chrono::system_clock::now();
     std::string YOLO_file = "../yolo11n.mnn";
     std::vector<std::string> yolo_input_names{"images"};
     std::vector<std::string> yolo_output_names{"output0"};
@@ -291,7 +326,7 @@ int main(int argc,char *argv[]){
     // std::vector<Express::VARP> yolo_outputs = yolo_module->onForward(yolo_inputs);
     std::shared_ptr<Module> yolo_net(Module::load(yolo_input_names,yolo_output_names,YOLO_file.c_str(),rtmgr));
     std::vector<Express::VARP> yolo_outputs = yolo_net->onForward({yolo_final_input_rgb});
-    std::clock_t yoloppost = std::clock();
+    auto yoloppost = std::chrono::system_clock::now();
     Express::VARP yolo_output = Express::_Transpose(Express::_Squeeze(yolo_outputs[0],{0}),{1,0});
 
     auto yolo_arr = yolo_output->readMap<float>();
@@ -348,11 +383,11 @@ int main(int argc,char *argv[]){
     
     if(CV::imwrite("../submit_final_img/1_final_detected_"+file,deblur_final_img,{})) std::cout<<"write final img success\n";
     else std::cout<<"write final img fail\n";   
-    std::clock_t end = std::clock();
+    auto end = std::chrono::system_clock::now();
     std::cout<<"\nComplete pipeline speed profile: \n";
-    std::cout<<"deblur time(s) \t"<<(double)(fpnpost-fpnpre)/CLOCKS_PER_SEC<<'\n';
-    std::cout<<"detect time(s) \t"<<(double)(yoloppost-yolopre)/CLOCKS_PER_SEC<<'\n';
-    std::cout<<"total time(s) \t"<<(double)(end-start)/CLOCKS_PER_SEC<<'\n';
+    std::cout<<"deblur time(s) \t"<<(double)std::chrono::duration_cast<std::chrono::milliseconds>(fpnpost-fpnpre).count()/1000<<'\n';
+    std::cout<<"detect time(s) \t"<<(double)std::chrono::duration_cast<std::chrono::milliseconds>(yoloppost-yolopre).count()/1000<<'\n';
+    std::cout<<"total time(s) \t"<<(double)std::chrono::duration_cast<std::chrono::milliseconds>(end-start).count()/1000<<'\n';
     std::cout<<"\n";
 
     // class_ids.clear();
